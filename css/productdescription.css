@@ -8,11 +8,19 @@ h1{
 
 }
 #productimage{
-    width:80%;margin-right:75px;
+    width:50%;margin-right:75px;
+
 
 }
+#productdescription{
+    width: 50%;
+    margin-left: 50px;
+    font-size: 20pt;
+    font-family:'instrument-sans-variable',sans-serif;
+    color:#FFE45C;
+}
 #boxcover{
-    width: 100%;
+    width: 90%;
     margin-top:50px;
     border: #FF9C39
     solid 5px;
@@ -26,4 +34,24 @@ h1{
     width:200px;
     margin: auto;
 }
+.comic{
+    margin:20px;
+    height:250px;
+    border: #0D68A9 solid 5px;
 
+}
+.comicline{
+    display:flex;
+    justify-content: flex-start;
+}
+h2{
+    margin-left:30px;
+    color:#FFE45C;
+
+
+}
+#instructiontitle{
+    text-align: center;
+    margin-top:100px;
+    
+}
