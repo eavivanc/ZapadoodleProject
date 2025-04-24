@@ -82,12 +82,12 @@ body {
     }
 
     .bio:nth-child(2) .bio-img-container {
-        border-color: #FF9C39; /* orange */
+        border-color: #FF9C39; 
         
     }
 
     .bio:nth-child(3) .bio-img-container {
-        border-color: #FFE45C; /* yellow */
+        border-color: #FFE45C; 
     }
 
     .bio h3 {
@@ -96,25 +96,25 @@ body {
       text-align: center;
     }
     .bio:nth-child(1) h3 {
-        color: #FF5050; /* red */
+        color: #FF5050;
         font-size: 20pt;
     }
 
     .bio:nth-child(2) h3 {
-        color: #FF9C39; /* orange */
+        color: #FF9C39; 
         font-size: 20pt;
 
     }
 
     .bio:nth-child(3) h3 {
-        color: #FFE45C; /* yellow */
+        color: #FFE45C; 
         font-size: 20pt;
 
     }
 
     .bio h4 {
-        font-weight: 400; /* make title lighter */
-        color: #e0e0e0;    /* optional: lighter grey instead of full white */
+        font-weight: 400; 
+        color: #e0e0e0;   
     }
 
     .bio h4 {
@@ -140,9 +140,9 @@ body {
         filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
     }
     .about-white {
-  color: white;
-}
+        color: white;
+      }
 
-.team-blue {
-  color: #0D68A9; /* Zap-A-Doodle blue */
-}
+      .team-blue {
+        color: #0D68A9; /* Zap-A-Doodle blue */
+      }
