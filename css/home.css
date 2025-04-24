@@ -4,12 +4,17 @@
 }
 body {
     background-color: #101010;
-    color: rgb(55, 55, 55);
+    color: white;
     font-family: Instrument Sans;
     background-image: url("assets/halftone_2.png");
     background-size: 100% auto;
     background-position: top center;
 }
+a {
+    text-decoration: none;
+}
+
+/* nav bar */
 #navbar {
     width: 100%;
     text-align: left;
@@ -46,4 +51,30 @@ body {
     width:40px;
     padding: 10px 10px 10px 30px;
     float: left;
+}
+
+/* main content */
+#content {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 60px;
+}
+.tagline {
+    margin-bottom: -100px;
+    margin-top: 60px;
+    font-size: 20pt;
+    z-index: 1;
+    position: relative;
+    color: rgb(255, 255, 255, .5);
+}
+h1 {
+    font-weight: 600;
+    font-size: 120pt;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+}
+h2 {
+    font-size: 30pt;
 }

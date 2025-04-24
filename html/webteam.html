@@ -6,24 +6,120 @@
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
-            
+            .team-head {
+                text-align: center;
+            }
+            .team-content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0px auto;
+                padding: 60px;
+                gap: 30px;
+            }
+            .team-float-left {
+                position: absolute;
+                width: 70px;
+                height: auto;
+                left: 7%;
+                top: 28%;
+                z-index: 10;
+                transform: rotate(-10deg);
+            }
+            .team-float-right {
+                position: absolute;
+                width: 70px;
+                height: auto;
+                right: 7%;
+                top: 32%;
+                z-index: 10;
+                transform: rotate(10deg);
+            }
+            .team-card {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 25px;
+                min-width: 350px;
+                background-color: #0D68A9;
+                text-align: center;
+                border-radius: 5px;
+            }
+            .team-img {
+                width: 100%;
+                height: auto;
+            }
+            .team-name {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+            .team-role {
+                margin-top:0;
+                color: rgba(255, 255, 255, 0.504);
+            }
+            .team-intro {
+                text-align: left;
+                font-style: italic;
+            }
         </style>
     </head>
     <body>
         <div class = "container">
             <div id="navbar">
-                <img class="icon" src="../css/assets/zap_a_doodle_icon.png">
-                <p class="navbutton">PRODUCT</p>
-                <p class="navbutton">ABOUT</p>
-                <p class="navbutton">DEVELOPMENT</p>
-                <p class="navbutton">SUPPORT US</p>
-                <p class="navbutton">DEV TEAM</p>
+                <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
+                <a href="productdescription.html" class="navbutton">PRODUCT</a>
+                <a href="zapteam.html" class="navbutton">ABOUT</a>
+                <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
+                <a href="support.html" class="navbutton">SUPPORT US</a>
+                <a href="webteam.html" class="navbutton">DEV TEAM</a>
                 <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
                 <img class="iconbutton" src="../css/assets/searchbutton.png">
             </div>
             <div class = "content">
-              
-                
+                <img src="../css/assets/lightning_bolt_star_2.svg" class="team-float-left">
+                <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right">
+                <div class="team-head">
+                    <p class="tagline">The website development team.</p>
+                    <h1>Meet the devs!</h1>
+                </div>
+                <div class="team-content">
+                    <div class="team-card">
+                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <p class="team-name">Costa Tzoytzoyrakos</p>
+                        <p class="team-role">Developer</p>
+                        <p class="team-intro">Self-intro here</p>
+                    </div>
+                    <div class="team-card">
+                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <p class="team-name">Maxine Ivey</p>
+                        <p class="team-role">Developer</p>
+                        <p class="team-intro">Self-intro here</p>
+                    </div>
+                    <div class="team-card">
+                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <p class="team-name">Sarah Kwang</p>
+                        <p class="team-role">Developer</p>
+                        <p class="team-intro">Self-intro here</p>
+                    </div>
+                    <div class="team-card">
+                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <p class="team-name">Gina Lee</p>
+                        <p class="team-role">Developer</p>
+                        <p class="team-intro">Self-intro here</p>
+                    </div>
+                    <div class="team-card">
+                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <p class="team-name">Eduarda Vivanco</p>
+                        <p class="team-role">Developer</p>
+                        <p class="team-intro">Self-intro here</p>
+                    </div>
+                    <div class="team-card">
+                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <p class="team-name">Rosa Suh</p>
+                        <p class="team-role">Developer</p>
+                        <p class="team-intro">Self-intro here</p>
+                    </div>
+                </div>
             </div>
             <div class = "footer">
             </div>
