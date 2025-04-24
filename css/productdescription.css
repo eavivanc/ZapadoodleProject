@@ -2,3 +2,28 @@ h1{
     font-size:50pt;
     font-family:'instrument-sans-variable',sans-serif;
 }
+
+#productinfo{
+    display:flex;
+
+}
+#productimage{
+    width:80%;margin-right:75px;
+
+}
+#boxcover{
+    width: 100%;
+    margin-top:50px;
+    border: #FF9C39
+    solid 5px;
+
+    
+}
+#producttitle{
+    text-align: center;
+}
+#charactergraphic{
+    width:200px;
+    margin: auto;
+}
+
