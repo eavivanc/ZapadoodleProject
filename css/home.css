@@ -1,12 +1,12 @@
 @font-face {
     font-family: Instrument Sans;
-    src: url("/1x/assets/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf");
+    src: url("assets/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf");
 }
 body {
     background-color: #101010;
-    color: white;
+    color: rgb(55, 55, 55);
     font-family: Instrument Sans;
-    background-image: url("/1x/assets/halftone_2.png");
+    background-image: url("assets/halftone_2.png");
     background-size: 100% auto;
     background-position: top center;
 }
