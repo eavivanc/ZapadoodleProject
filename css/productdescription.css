@@ -29,10 +29,12 @@ h1{
 }
 #producttitle{
     text-align: center;
+    color: white;
 }
 #charactergraphic{
     width:200px;
-    margin: auto;
+    margin-top:100px;
+    margin-left: 40%;
 }
 .comic{
     margin:20px;
@@ -43,15 +45,35 @@ h1{
 .comicline{
     display:flex;
     justify-content: flex-start;
+    width: 100%;
 }
 h2{
     margin-left:30px;
     color:#FFE45C;
+    font-style: italic ;
 
 
 }
 #instructiontitle{
     text-align: center;
     margin-top:100px;
+    color: #FF9C39;
+
+    text-decoration: underline;
+    text-underline-offset: 15px;
     
 }
+#buybutton{
+    background-color: #FF9C39;
+    color: black;
+    font-size: 16pt;
+    font-family: 'instrument-sans-variable', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 50px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+
