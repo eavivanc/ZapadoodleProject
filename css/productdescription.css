@@ -5,12 +5,39 @@ h1{
 
 #productinfo{
     display:flex;
+    
+    margin-top:100px;
+    margin-left:15px;
 
 }
+
+#PIC{
+    width:150px;
+}
 #productimage{
-    width:50%;margin-right:75px;
+    
+    width:100%;
+    background-color:antiquewhite;
+    border-radius: 7px;
+    display: flex;
 
 
+}
+#left{
+    display: flex;
+    width:50%;
+    flex-direction: column;
+}
+#productpics{
+    display: flex;
+    flex-direction: column;
+    width:200px;
+}
+#productpic{
+    width:150px;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 7px;
 }
 #productdescription{
     width: 50%;
@@ -20,10 +47,10 @@ h1{
     color:#FFE45C;
 }
 #boxcover{
-    width: 90%;
+    width: 80%;
     margin-top:50px;
-    border: #FF9C39
-    solid 5px;
+
+    padding:20px;
 
     
 }
@@ -77,3 +104,23 @@ h2{
 }
 
 
+#back{
+    width:100px;
+}
+#forward{
+    width:100px;
+}
+#play_pause{
+    width:150px;
+    padding:20px;
+}
+
+
+#buttons{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}

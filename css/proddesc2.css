@@ -1,0 +1,159 @@
+
+
+.image-thumbnails{
+    
+    display:flex;
+    justify-content: space-between;
+  
+    
+    max-width:400px;
+    margin-bottom: 20px;
+    margin-right:40px;
+}
+.thumbnail{
+    width:90px;
+    height:90px;
+    opacity: .5;
+    
+}
+.product-image
+{
+    width: 400px;
+    height:400px;
+    margin-right:40px;
+    margin-bottom: 20px;
+    margin-top:30px;
+    
+}
+#product-name{
+    font-size:25pt;
+    color:#FFE45C;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.product{
+    display:flex;
+}
+.main-container{
+    display:flex;
+    flex-direction: column;
+}
+.info{
+    display:flex;
+    flex-direction: column;
+    
+
+   
+}
+.tabs{
+    margin-top:30px;
+   
+    display:flex;
+    margin-right:800px;
+   
+}
+.tab{
+    background-color:#062943;
+    color: rgb(255, 255, 255);
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+ 
+    
+}
+
+.description-box{
+    background-color:#0D68A9 ;
+    display: flex;
+   flex-direction: column;
+   min-height: 400px;
+}
+#price{
+    font-size: 16pt;
+    font-weight: bold;
+    
+
+}
+#selection{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+select{
+    width:120px;
+    height:25px;
+    font-size: 10pt;
+    text-align: center;
+    margin-left:10px;
+    background-color:#0D68A9 ;
+    color:white;
+    border-radius: 5px;
+
+    font-family: 'instrument-sans-variable',sans-serif;
+}
+#add-to-cart{
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    
+}
+.add-to-cart-button{
+    background-color: #FFE45C;
+    color:black;
+    padding: 10px;
+    font-size: 12pt;
+    font-family: 'instrument-sans-variable',sans-serif;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.buy-now-button{
+    background-color: #FF9C39;
+    color: black;
+    font-size: 12pt;
+    font-family: 'instrument-sans-variable',sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#walkthrough-nav{
+    display: flex;
+    margin-left:50px;
+    margin-right:50px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+#back-button{
+width:70px;
+
+}
+#forward-button{
+    width:70px;
+}
+
+#play_pause{
+    width:100px;
+}
+#step-img{
+    width:350px;
+    align-self: center;
+    
+}
+#product_description{
+    line-height: 25px;
+}
+#product-specifications{
+    columns: 2;
+    line-height: 20px;
+    margin-left:40px;
+}
+h2{
+    margin-left:40px;
+}

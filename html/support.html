@@ -1,34 +1,190 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Support</title>
-        <link rel="stylesheet" type="text/css" href="../css/home.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <style>
-            
-        </style>
-    </head>
-    <body>
-        <div class = "container">
-            <div id="navbar">
-                <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
-                <a href="productdescription.html" class="navbutton">PRODUCT</a>
-                <a href="zapteam.html" class="navbutton">ABOUT</a>
-                <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
-                <a href="support.html" class="navbutton">SUPPORT US</a>
-                <a href="webteam.html" class="navbutton">DEV TEAM</a>
-                <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
-                <img class="iconbutton" src="../css/assets/searchbutton.png">
-            </div>
-            <div class = "content">
-              
-                
-            </div>
-            <div class = "footer">
-            </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Us | Zap-a-Doodle</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #header-banner {
+      width: 1440px;
+      margin: 80px auto 40px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    #header-banner h1 {
+      font-size: 60pt;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    #support-section {
+      width: 100%;
+      padding: 100px 60px;
+      background-color: #0a0a0a;
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    #support-section p {
+      font-size: 14pt;
+      line-height: 1.7;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+    }
+
+    .canvas-section {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .canvas-section img {
+      width: 70%;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease;
+    }
+
+    .canvas-section img:hover {
+      transform: scale(1.03);
+    }
+
+    .content-block {
+      padding: 80px 60px;
+      background-color: #1a1a1a;
+      margin-top: 60px;
+      border-radius: 12px;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .content-block h2 {
+      font-size: 28pt;
+      color: #FFE45C;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .content-block p {
+      font-size: 13pt;
+      color: rgba(255,255,255,0.8);
+      max-width: 1000px;
+      margin: auto;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .cta-block {
+      background-color: #FF5050;
+      padding: 60px;
+      text-align: center;
+      border-radius: 12px;
+      margin-top: 80px;
+      transition: background 0.3s ease;
+    }
+
+    .cta-block h2 {
+      font-size: 32pt;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .cta-block button {
+      background-color: #FFE45C;
+      border: none;
+      color: black;
+      padding: 20px 40px;
+      font-size: 14pt;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .cta-block button:hover {
+      background-color: #ffdb2c;
+      transform: scale(1.05);
+    }
+
+    .fade-in {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="page-wrapper">
+    <div id="navbar">
+      <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
+      <a href="productdescription.html" class="navbutton">PRODUCT</a>
+      <a href="zapteam.html" class="navbutton">ABOUT</a>
+      <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
+      <a href="support.html" class="navbutton">SUPPORT US</a>
+      <a href="webteam.html" class="navbutton">DEV TEAM</a>
+      <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+      <img class="iconbutton" src="../css/assets/searchbutton.png">
+    </div>
+  </div>
+
+  <div id="header-banner">
+    <h1>Support Our Mission</h1>
+  </div>
+
+  <div id="page-wrapper">
+    <div id="support-section">
+      <p>Zap-a-Doodle started with the simple goal of making a party game that never loses its spark. Since then, we’ve prototyped, playtested, and iterated our design into one we truly love. This page is a glimpse into the care and strategy that went into our project.</p>
+
+      <div class="canvas-section">
+        <h2 style="color:#FF9C39; font-weight:600;">Our Business Model</h2>
+        <img src="../1x/SupportUs Assets/Business Model Canvas - Strategyzer.pdf.png" alt="Zap-a-Doodle Business Model Canvas">
+      </div>
+
+      <div class="content-block" id="competitive">
+        <h2>Competitive Landscape</h2>
+        <p>Zap-a-Doodle enters a playful yet competitive market filled with classic party games and new tech-enhanced formats. What sets us apart is our physical interactivity and unique mechanic — the zap — combined with simple rules and high replayability. Our primary competitors include Pictionary Air, Exploding Kittens, and What Do You Meme?, but none of them incorporate real-time physical feedback or a shock element into their gameplay.</p>
+
+        <div class="canvas-section">
+          <img src="../1x/SupportUs Assets/Zabble Comp Analysis.png" alt="Competitive Analysis">
         </div>
-    </body>
-    
-    
+      </div>
+
+      <div class="cta-block">
+        <h2>Join Us in Making Magic</h2>
+        <br>
+        <button>Become a Backer</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#header-banner').delay(200).animate({ opacity: 1, top: '0px' }, 800);
+
+      $('.cta-block button').click(function() {
+        $(this).text('Thank You!').css('background-color', '#0D68A9');
+      });
+
+      const reveal = function() {
+        $('.content-block').each(function() {
+          const top = $(this).offset().top;
+          const scroll = $(window).scrollTop();
+          const height = $(window).height();
+          if (scroll > top - height + 100) {
+            $(this).addClass('fade-in');
+          }
+        });
+      };
+      $(window).on('scroll', reveal);
+      reveal();
+    });
+  </script>
+</body>
 </html>
