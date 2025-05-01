@@ -4,9 +4,13 @@
         <meta charset="UTF-8">
         <title>Product Development</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lightgallery.css" />
+        <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-thumbnail.css" />
 
         <style> 
+
+        
 
             body{
                 margin-left:22px;
@@ -47,7 +51,10 @@
 
     </head>
     <body>
-        <div class = "container">
+        <!-- entire page -->
+        <div class = "container"> 
+            
+            <!-- navbar -->
             <div id="navbar">
                 <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
                 <a href="productdescription.html" class="navbutton">PRODUCT</a>
@@ -59,13 +66,13 @@
                 <img class="iconbutton" src="../css/assets/searchbutton.png">
             </div>
 
-
+            <!-- text content after header -->
             <div class = "content">
 
+        <!-- header -->
                 <div class="tagline">The process behind Zap-A-Doodle</div>
               
             <h1>Development</h1>
-            <!-- <img src="../css/assets/lightning_bolt_star_2.svg" class="team-float-left"> -->
             <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right">
 
             <br>
@@ -74,7 +81,7 @@
             <div class="flex">
 
             <img src = "../1x/development_img/0225 Shocker Enabled.jpg" class="img1">
-
+        <!-- end of header -->
 
             <div class="text">
 
@@ -170,6 +177,37 @@
             <div class = "footer">
             </div>
         </div>
+
+        <div id="lightgallery">
+            <a href="../1x/development_img/ShockPen.PNG" data-lg-size="1600-2400">
+                <img alt="img1" src="../1x/development_img/ShockPen.PNG" />
+            </a>
+            <a href="../1x/development_img/ShockPen.PNG" data-lg-size="1024-800">
+                <img alt="img2" src="../1x/development_img/ShockPen.PNG" />
+            </a>
+            <a href="../1x/development_img/ShockPen.PNG" data-lg-size="1024-800">
+                <img alt="img2" src="../1x/development_img/ShockPen.PNG" />
+            </a>
+            <a href="../1x/development_img/ShockPen.PNG" data-lg-size="1024-800">
+                <img alt="img2" src="../1x/development_img/ShockPen.PNG" />
+            </a>
+            <a href="../1x/development_img/ShockPen.PNG" data-lg-size="1024-800">
+                <img alt="img2" src="../1x/development_img/ShockPen.PNG" />
+            </a>
+        </div>
+        
+
+        <!-- lightgallery plugins -->
+        <script src="../node_modules/lightgallery/lightgallery.umd.js"></script>
+        <script src="../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+        <!-- lightgallery plugins -->
+        
+        <script type="text/javascript">
+            lightGallery(document.getElementById('lightgallery'), {
+                
+            });
+        </script>
+
     </body>
     
     
