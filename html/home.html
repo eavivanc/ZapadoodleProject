@@ -1,34 +1,175 @@
-<!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="UTF-8">
-        <title>Home Page</title>
+        <title>Zap-A-Doodle</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
-            
+            /* landing */
+            #landing {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                margin: 0px auto;
+                position: relative;
+                text-align: center;
+                min-height: 900px;
+            }
+            .landingimg {
+                width: 90%;
+                height: auto;
+                position: absolute;
+                top: 180px;
+                left: 50%;
+                z-index: 2;
+                transform: translateX(-50%);
+                pointer-events: none;
+            }
+            /* sections */
+            .quote-top, .quote-bottom {
+                width: 100%;
+            }
+            .quote-bottom p {
+                text-align: right;
+                font-size: 70pt;
+                font-weight: 500;
+            }
+            /* instruction section */
+            #instructions {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                max-width: none;
+                background-color:#0D68A9;
+                text-align: left;
+                height: fit-content;
+                padding: 30px 60px;
+            }
+            /* gameplay section */
+            #gameplay {
+                background-color: #101010;
+                color: white;
+                font-family: 'Instrument Sans', sans-serif;
+                padding: 100px 20px;
+                text-align: center;
+                background-image: url(../css/assets/halftone_2.png);
+                background-size: 100% auto;
+            }
+            #gameplay h1 {
+            font-size: 48pt;
+            font-weight: 700;
+            margin-bottom: 40px;
+            }
+            .instructionsimg {
+                width: 50%;
+            }
+            /* alternate section */
+            #alternate {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                max-width: none;
+                text-align: left;
+                height: fit-content;
+                background-color:#ff9c39;
+                padding: 30px 60px;
+            }
+            /* support section */
+            #support h2 {
+                font-size: 40pt;
+                margin-bottom: 20px;
+            }
+            .supportcopy {
+                font-size: 14pt;
+                margin-bottom: 40px;
+                max-width: 800px;
+            }
+            .donate-button {
+                background-color: #ffe45c;
+                color: black;
+                padding: 15px 30px;
+                font-size: 14pt;
+                font-weight: 600;
+                border: none;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+                float: right;
+            }
+
+            .donate-button:hover {
+                background-color: #ffa94d;
+            }
         </style>
     </head>
     <body>
-        <div class = "container">
+        <div id="container">
             <div id="navbar">
-                <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
-                <a href="productdescription.html" class="navbutton">PRODUCT</a>
-                <a href="zapteam.html" class="navbutton">ABOUT</a>
-                <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
-                <a href="support.html" class="navbutton">SUPPORT US</a>
-                <a href="webteam.html" class="navbutton">DEV TEAM</a>
+                <div class="navlinks">
+                    <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
+                    <a href="productdescription.html" class="navbutton">PRODUCT</a>
+                    <a href="zapteam.html" class="navbutton">ABOUT</a>
+                    <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
+                    <a href="support.html" class="navbutton">SUPPORT US</a>
+                    <a href="webteam.html" class="navbutton">DEV TEAM</a>
+                </div>
                 <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
-                <img class="iconbutton" src="../css/assets/searchbutton.png">
             </div>
-            <div class = "content">
-              
-                
+            
+        <div id="landing">
+            <p class="tagline">The new party game of the century.</p>
+            <h1 class="title">Shockingly fun!</h1>
+            <img class="landingimg" src="../css/assets/zap_a_doodle_character graphic.svg">
+        </div>
+
+        <div class="section" id="instructions">
+            <div class="quote-top">
+                <h2>Take turns drawing a word,<br>but look out for the shocking twist!</h2>
+                <p class="instructionscopy">If one of the "buzz words" is guessed, then the opposing team has the right to 'punish'<br>the artist by sending a shock to the pen they're holding!</p>
             </div>
-            <div class = "footer">
+            <div class="quote-bottom">
+                <p>Shock the artist—<strong>literally</strong>!</p>
             </div>
         </div>
+
+        <div class="section" id="gameplay">
+            <h1>How to play</h1>
+            <img src="instructions.jpeg" class="instructionsimg">
+        </div>
+
+        <div class="section" id="alternate">
+            <div class="quote-top">
+                <h2>Can switch to "vibrate mode"<br>for the faint of heart</h2>
+                <p class="instructionscopy">Getting mildly electrocuted may not be everyone's cup of tea. So switching<br>to vibration-only may be an option.</p>
+            </div>
+            <div class="quote-bottom">
+                <p>Alternative "shock"</p>
+            </div>
+        </div>
+
+        <div class="section" id="support">
+            <h2>Support us!</h2>
+            <p class="supportcopy">Love the chaos? Help us keep the buzz alive! Your donation fuels development, better shocks (we mean features), and helps our small team bring the fun to more players worldwide.</p>
+            <a class="donate-button">DONATE</a>
+        </div>
+
+        <div id="footer">
+            <div id="footer-content">
+                <img class="footerimg" src="../css/assets/zap_a_doodle_wordmark.png">
+                <div id="footer-links">
+                    <a href="productdescription.html" class="footer-link">PRODUCT</a>
+                    <a href="zapteam.html" class="footer-link">ABOUT</a>
+                    <a href="prod_dev.html" class="footer-link">DEVELOPMENT</a>
+                    <a href="support.html" class="footer-link">SUPPORT US</a>
+                    <a href="webteam.html" class="footer-link">DEV TEAM</a>
+                </div>
+            </div>
+            <p class="rights">© 2025 Zap-A-Doodle. All Rights Reserved.</p>
+        </div>
+
+        </div><!--container end-->
     </body>
-    
-    
 </html>

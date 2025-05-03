@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Product Description</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
-        <link rel="stylesheet" type="text/css" href="../css/productdescription.css">
+        <link rel="stylesheet" type="text/css" href="../css/proddesc2.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
             
@@ -13,69 +13,117 @@
     <body>
         <div class = "container">
             <div id="navbar">
-                <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
-                <a href="productdescription.html" class="navbutton">PRODUCT</a>
-                <a href="zapteam.html" class="navbutton">ABOUT</a>
-                <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
-                <a href="support.html" class="navbutton">SUPPORT US</a>
-                <a href="webteam.html" class="navbutton">DEV TEAM</a>
+                <div class="navlinks">
+                    <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
+                    <a href="productdescription.html" class="navbutton">PRODUCT</a>
+                    <a href="zapteam.html" class="navbutton">ABOUT</a>
+                    <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
+                    <a href="support.html" class="navbutton">SUPPORT US</a>
+                    <a href="webteam.html" class="navbutton">DEV TEAM</a>
+                </div>
                 <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
-                <img class="iconbutton" src="../css/assets/searchbutton.png">
             </div>
-            <div class = "content">
-                <div id = "productinfo">
-                    <div id = "productimage">
-                        <img id = "boxcover" src="../css/assets/boxcover.jpeg">
-                        <button id = "buybutton">buy now</button>
-                        <p>Game Contents:
-                            <ul>
-                                <li>1 Zapping Expo Marker</li>
-                                <li>1 Buzzer</li>
-                                <li>1 White Board</li>
-                                <li>1 instruction manual</li>
-                            </ul>
-                        </p>
+
+            <div class="header">
+                <p class="tagline">Shop Zap-A-Doodle now!</p>
+                <h1>Buy</h1>
+            </div>    
+
+            <div class = "section main-container">
+                <div class = "product">
+                    <div class = "image-gallery">
+                        <img src="../css/assets/boxcover.jpeg" alt="Product Image" class = "product-image">
+                        <div class = "image-thumbnails">
+                            <img src="../css/assets/boxcover.jpeg" alt="Thumbnail 1" class = "thumbnail">
+                            <img src="../css/assets/contentaiimage.png" alt="Thumbnail 2" class = "thumbnail">
+                            <img src="../1x/development_img/ShockPen.PNG" alt="Thumbnail 3" class = "thumbnail">
+                            <img src="../1x/development_img/PXL_20250306_212209011.jpg" alt="Thumbnail 4" class = "thumbnail">
+                        </div>  
                     </div>
-                    <div id = "productdescription">
-                        <h1 id = "producttitle">Zap-a-Doodle</h1>
-                        <p>Zap-a-Doodle is a fun and interactive game that combines creativity and strategy. Players take turns drawing doodles while others guess what they are. The game is designed for all ages and encourages teamwork and communication.</p>
-                        <p>Players can use various drawing tools and colors to create their doodles, making each game unique. The objective is to guess the doodle before time runs out!</p>
+                    <div class = "product-details">
+                        <div class = "details">
+                            <h1 id = "product-name">Zap-A-Doodle Party Game</h1>
+                            
+                            <div id = "description">
+                                <p id = "product_description">Introducing <strong>Zap-A-Doodle</strong>, the latest party game that will <em>shock</em> you! Get your friends and go head to head in this drawing & guessing game. Two teams, one word, guess it without saying one of the buzz words and before the timer goes off to avoid getting <strong><em>zapped!</em></strong> </p>
+                            </div>
+                            <div id = "selection">
+                                <label > Select Marker Type:</label>
+                                <select id = "marker-type">
+                                    <option value="red">Vibrating</option>
+                                    <option value="blue">Zapping</option>
+                                </select>
+                            </div>
+                            <div id = "price">
+                                $29.99
+                            </div>
+                            <div id = "add-to-cart">
+                                <button class = "add-to-cart-button">Add to Cart</button>
+                                <button class = "buy-now-button">Buy Now</button>
+                            </div>
+        
+                        </div>
                     </div>
                 </div>
-                <div id = "gameinstructions">
-                    <h1 id = "instructiontitle"> How to Play</h1>
-                    <h2>setting up</h2>
-                    <div class = "comicline">
-
-                        <img class = "comic" id = "step1" src = /1x/step1.png>
-                        <img class = "comic" id = "step2" src = /1x/step2.png>
-                        <img class = "comic" id = "step3" src = /1x/step3.png>
+                <div class = "info">
+                    <div class = "tabs">
+                        <div class = "tab" id = "description-tab">Description</div>
+                        <div class = "tab" id = "reviews-tab">Reviews</div>
+                        <div class = "tab" id = "shipping-tab">Shipping</div>
                     </div>
-                    <h2>playing the game</h2>
-                    <div class = "comicline">
-                        <img class = "comic" id = "step4" src = /1x/step4.png>
-                        <img class = "comic" id = "step5" src = /1x/step5.png>
-                        <img class = "comic" id = "step6" src = /1x/step6.png>
+                    <div class = "description-box">
+                        <h2>Product Specifications</h2>
+                        <div id = "product-specifications">
+                            
+                                <p>
+                                    <strong>Product Name:</strong> Zap-A-Doodle<br>
+                                    <strong>Product Type:</strong> Party Game<br>
+                                    <strong>Recommended Age:</strong> 8+<br>
+                                    <strong>Number of Players:</strong> 4-10 players<br>
+                                    <strong>Game Duration:</strong> 30-60 minutes<br>
+                                </p>
+                                <br><br>
+                                <p>
+                                    <strong>Contents:</strong><br>
+                                    - 1 Shock Pen or Vibrating Pen<br>
+                                    - 1 Timer<br>
+                                    - 1 Game Board<br>
+                                    - 100 Word Cards<br>
+                                    - 1 Instruction Manual<br>
+                                    <strong>Material:</strong> Plastic, Paper<br>
+                                    <strong>Dimensions:</strong> 10 x 10 x 2 inches<br>
+                                    <strong>Weight:</strong> 1.5 lbs<br>
+                                    <strong>Battery:</strong> 2 AAA batteries (not included)<br>
+                                </p>
+                        </div>
+                        <p> How to Play : </p>
+                        <img id = "step-img" src = "../1x/step5.png" alt = "Step 1">
+                        <div id = "step-text">
+                            DESCRIPTION OF STEP 1 (voiced over)
+                        </div>
+                        <div id = "walkthrough-nav">
+                            <img id = back-button src = "../1x/back.png" alt = "Back">
+                            
+                            <img id = "forward-button" src = "../1x/forward.png" alt = "Forward">
+                        </div>
+                        
                     </div>
-                    <h2>winning the game</h2>
-                    <div class = "comicline">
-                        <img class = "comic" id = "step7" src = /1x/step7.png>
-                        <img class = "comic" id = "step8" src = /1x/step8.png>
-                    </div>
-                
-
                 </div>
-                
-                <img id = "charactergraphic" src="../css/assets/zap_a_doodle_character graphic.svg">
-               
-
-                
             </div>
-            <div class = "footer">
-                <p>Zap-A-Doodle by Zabble </p>
+            <div id="footer">
+                <div id="footer-content">
+                    <img class="footerimg" src="../css/assets/zap_a_doodle_wordmark.png">
+                    <div id="footer-links">
+                        <a href="productdescription.html" class="footer-link">PRODUCT</a>
+                        <a href="zapteam.html" class="footer-link">ABOUT</a>
+                        <a href="prod_dev.html" class="footer-link">DEVELOPMENT</a>
+                        <a href="support.html" class="footer-link">SUPPORT US</a>
+                        <a href="webteam.html" class="footer-link">DEV TEAM</a>
+                    </div>
+                </div>
+                <p class="rights">© 2025 Zap-A-Doodle. All Rights Reserved.</p>
             </div>
         </div>
     </body>
-    
-    
+<script src = "/js/productdescription.js"></script>
 </html>

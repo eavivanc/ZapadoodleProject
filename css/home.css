@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 @font-face {
     font-family: Instrument Sans;
     src: url("assets/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf");
@@ -9,72 +12,132 @@ body {
     background-image: url("assets/halftone_2.png");
     background-size: 100% auto;
     background-position: top center;
+    margin: 0;
 }
 a {
     text-decoration: none;
 }
+.halftone-bg {
+    background-color: #101010;
+    color: white;
+    padding: 100px 60px;
+    text-align: left;
+    font-family: 'Instrument Sans', sans-serif;
+    background-image: url(../css/assets/halftone_2.png);
+    background-size: 100% auto;
+}
 
 /* nav bar */
 #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
     width: 100%;
-    text-align: left;
+}
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 .navbutton {
-    display: inline-block;
-    padding: 30px;
-    margin: 0px auto;
     font-size: 8pt;
-    color: rgb(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 .navbutton:hover {
-    display: inline-block;
-    padding: 30px;
-    margin: 0px auto;
-    font-size: 8pt;
-    color: rgba(255, 255, 255);
-    transition: 300ms;
-}
-.iconbutton {
-    float: right;
-    width: 20px;
-    padding: 30px;
-    opacity: 0.5;
-}
-.iconbutton:hover {
-    float: right;
-    width: 20px;
-    padding: 30px;
-    opacity: 1;
-    transition: 300ms;
+    color: white;
 }
 .icon {
-    width:40px;
-    padding: 10px 10px 10px 30px;
-    float: left;
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+.icon:hover {
+    transform: rotate(5deg);
+}
+.iconbutton {
+    width: 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+.iconbutton:hover {
+    opacity: 1;
 }
 
 /* main content */
-#content {
-    display: flex;
+.section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 60px;
+}
+#container {
+    display:flex;
     flex-direction: column;
-    margin: 0px auto;
-    padding: 60px;
+}
+.header {
+    text-align: center;
+}
+.header h1 {
+    font-size: 80pt;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    margin-top: -30px;
 }
 .tagline {
-    margin-bottom: -100px;
-    margin-top: 60px;
     font-size: 20pt;
     z-index: 1;
     position: relative;
     color: rgb(255, 255, 255, .5);
 }
-h1 {
+.title {
+    margin-top: -50px;
     font-weight: 600;
-    font-size: 120pt;
+    font-size: 110pt;
     position: relative;
     z-index: 1;
     margin-bottom: 0;
 }
 h2 {
     font-size: 30pt;
+}
+p {
+    font-size: 16pt;
+}
+
+/* footer */
+#footer {
+    background-color: #101010;
+    color: white;
+    padding: 90px 60px;
+    text-align: left;
+    font-family: 'Instrument Sans', sans-serif;
+}
+#footer-content {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.footerimg {
+    width: 300px;
+    height: auto;
+}
+#footer-links {
+    display: flex;
+    gap: 20px;
+}
+.footer-link {
+    font-size: 9pt;
+    color: rgb(255, 255, 255, 0.5);
+}
+.footer-link:hover {
+    color: rgb(255, 255, 255);
+    transition: 300ms;
+}
+.rights {
+    font-size: 9pt;
+    color:rgb(255, 255, 255, 0.5);
+    margin: 0px;
 }
