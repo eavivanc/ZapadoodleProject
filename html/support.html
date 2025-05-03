@@ -148,6 +148,79 @@
       </div>
 
       <div class="content-block" id="competitive">
+
+        <div class="content-block" id="financial">
+          <h2>Financial Projections</h2>
+          <p>Our 12-month pro forma below outlines projected revenue, operating costs, and net income over the first year of Zap-a-Doodle's launch. The data reflects licensing, royalties, and crowdfunding performance expectations.</p>
+          <canvas id="financeChart" width="800" height="400"></canvas>
+        </div>
+        
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const ctx = document.getElementById('financeChart').getContext('2d');
+        
+          const financeChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: [
+                'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+              ],
+              datasets: [
+                {
+                  label: 'Total Revenue',
+                  data: [0, 1000, 11000, 1500, 1500, 5500, 500, 500, 6000, 4000, 2500, 5500],
+                  backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+                },
+                {
+                  label: 'Recurring Costs',
+                  data: [4000, 3000, 2000, 2000, 1500, 1500, 1000, 1000, 500, 500, 250, 250],
+                  backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 1
+                },
+                {
+                  label: 'Net Income',
+                  data: [-4000, -2000, 9000, -500, 0, 4000, -500, -500, 5500, 3500, 2250, 5250],
+                  backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                  borderColor: 'rgba(75, 192, 192, 1)',
+                  borderWidth: 1
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                tooltip: {
+                  mode: 'index',
+                  intersect: false
+                },
+                title: {
+                  display: true,
+                  text: 'Zap-a-Doodle Monthly Financial Forecast'
+                }
+              },
+              interaction: {
+                mode: 'nearest',
+                axis: 'x',
+                intersect: false
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: 'Amount ($)'
+                  }
+                }
+              }
+            }
+          });
+        </script>
+        
         <h2>Competitive Landscape</h2>
         <p>Zap-a-Doodle enters a playful yet competitive market filled with classic party games and new tech-enhanced formats. What sets us apart is our physical interactivity and unique mechanic — the zap — combined with simple rules and high replayability. Our primary competitors include Pictionary Air, Exploding Kittens, and What Do You Meme?, but none of them incorporate real-time physical feedback or a shock element into their gameplay.</p>
 

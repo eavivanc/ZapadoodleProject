@@ -4,24 +4,13 @@
         <meta charset="UTF-8">
         <title>Product Development</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lightgallery.css" />
+        <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-thumbnail.css" />
+        <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-zoom.css" />
+
 
         <style> 
-
-            body{
-                margin-left:22px;
-                margin-right:22px; 
-            }
-
-            .text{
-                padding-left:40px;
-                margin-right:20px;
-                width:600px;
-            }
-
-            .flex{
-                display:flex;
-            }
 
             .team-float-right {
                 position: absolute;
@@ -33,21 +22,47 @@
                 transform: rotate(10deg);
             }
 
+            body{
+                margin-left:22px;
+                margin-right:22px; 
+            }
+
+            .text{
+                padding-left:50px;
+                margin-right:20px;
+                width:600px;
+            }
+
+            .flex{
+                display:flex;
+            }
+
             .img2{
-                max-width:650px;
-                max-height:auto;
+                width:650px;
+                height:auto;
+                max-height:500px;
+                object-fit: cover;
                 margin: 20px;
                 margin-left:0px;
                 margin-top:0px;
+                border-radius:10px;
+                transition: transform 0.3s ease;
             }
 
+            .img2:hover{
+                transform: translateY(-10px);
+            }
 
 
         </style>
 
     </head>
+
     <body>
-        <div class = "container">
+        <!-- entire page -->
+        <div class = "container"> 
+            
+            <!-- navbar -->
             <div id="navbar">
                 <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
                 <a href="productdescription.html" class="navbutton">PRODUCT</a>
@@ -59,56 +74,74 @@
                 <img class="iconbutton" src="../css/assets/searchbutton.png">
             </div>
 
+        <!-- text content after header -->
+        <div class = "content">
 
-            <div class = "content">
-
+            <!-- header -->
                 <div class="tagline">The process behind Zap-A-Doodle</div>
               
-            <h1>Development</h1>
-            <!-- <img src="../css/assets/lightning_bolt_star_2.svg" class="team-float-left"> -->
-            <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right">
+                <h1>Development</h1>
+                <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right">
 
-            <br>
-            <br>
+                <br>
+                <br>
 
-            <div class="flex">
+            <!-- end of header -->
 
-            <img src = "../1x/development_img/0225 Shocker Enabled.jpg" class="img1">
-
+    <!-- start of section 1 -->
+    
+        <!-- start of flex 1 -->
+        <div class="flex">
+                
+            <div id="lightgallery1">
+                <a href="../1x/development_img/0225 Shocker Enabled.jpg" width="100%" height="100%">
+                    <img alt="February 25: Shocker enabled for the first time!" src="../1x/development_img/0225 Shocker Enabled.jpg" class="img2"/>
+                </a>
+            </div>
 
             <div class="text">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+                <h2>The first shock</h2>
 
-            <h2>The first shock</h2>
-
-            <p>Back in February, we had our first shocking prototype working,
+                <p>Back in February, we had our first shocking prototype working,
                 tethered to an Arduino.  Then, in March, we decided to make a version
                 that vibrated instead of shocked (in case folks really didn't want to
                 get shocked but we could still play-test with everyone) and then
                 finally in late March we got the wireless shocking pen working and the
                 game mechanic was close to perfected at this point.</p>
-        
-            </div>
-
-            </div>
-
-            <br>
-
-            <img src = "../1x/development_img/0317 Wireless Shocker.jpg" class="img2">
-
-            <img src = "../1x/development_img/0305 Vibrator Enabled (1).jpg" class="img2">
             
-            <div class="flex">
+            <!-- end of text 1 -->
+            </div>
 
-                <div class="text">
+        <!-- end of flex 1 -->
+        </div>
+
+        <br>
+
+        <div id="lightgallery2">
+            <a href="../1x/development_img/0305 Vibrator Enabled (1).jpg" width="100%" height="100%">
+                <img alt="March 5: Vibrator enabled" src="../1x/development_img/0305 Vibrator Enabled (1).jpg" class="img2"/>
+            </a>
+    
+            <a href="../1x/development_img/0317 Wireless Shocker.jpg" width="100%" height="100%">
+                <img alt="March 17: Wireless shocker" src="../1x/development_img/0317 Wireless Shocker.jpg" class="img2"/>
+            </a>
+        </div>
+
+    <!-- start of section 2 -->
+            
+        <!-- beginning of flex 2 -->
+        <div class="flex">
+
+            <div class="text">
     
                     <br>
                     <br>
@@ -123,25 +156,42 @@
         
                     <p>After fleshing out our gameplay dynamics, we went into CAD and modeled our props!</p>
                 
-                    </div>
-
-                <img src = "../1x/development_img/0417 Shocker Pen.PNG" class="img1">
+                    <!-- end of text 2 -->
+            </div>
                 
+
+            <div id="lightgallery3">
+                <a href="../1x/development_img/0417 Shocker Pen.PNG" width="100%" height="100%">
+                <img alt="April 17: Shocker pen model" src="../1x/development_img/0417 Shocker Pen.PNG" class="img2"/>
+                </a>
+            </div>
     
                     
-    
-                </div>
+        <!-- end of flex 2-->
+        </div>
 
-                <br>
+        <br>
+            
+        <div id="lightgallery4">
+            <a href="../1x/development_img/PXL_20250211_060534790.jpg" width="100%" height="100%">
+                <img alt="Pen connected to shocker Arduino" src="../1x/development_img/PXL_20250211_060534790.jpg" class="img2"/>
+            </a>
 
-                <img src = "../1x/development_img/ShockPen.PNG" class="img2">
-    
-                <img src = "../1x/development_img/PXL_20250211_060534790.jpg" class="img2">
+            <a href="../1x/development_img/PXL_20250306_212209011.jpg" width="100%" height="100%">
+                <img alt="Demo with our shock pen" src="../1x/development_img/PXL_20250306_212209011.jpg" class="img2"/>
+            </a>
+        </div>
 
-                <div class="flex">
+    <!-- start of section 3 -->
 
-                    <img src = "../1x/development_img/PXL_20250401_171742673~2.jpg" class="img2">
-        
+        <!-- beginning of flexbox 3 -->
+        <div class="flex">
+
+            <div id="lightgallery5">
+                <a href="../1x/development_img/PXL_20250401_202521179.jpg" width="100%" height="100%">
+                    <img alt="Early paper sketches of logo" src="../1x/development_img/PXL_20250401_202521179.jpg" class="img2"/>
+                </a>
+            </div>
         
                     <div class="text">
         
@@ -158,18 +208,64 @@
         
                     <p>We hit the drawing board and drafted our logo, character mascots, and design style!</p>
                 
+                    <!-- end of text -->
                     </div>
-        
-                    </div>
+                    <!-- end of text -->
+                    
+        <!-- end of flex 3-->
+        </div>
 
-                    <img src = "../1x/development_img/PXL_20250306_212209011.jpg" class="img2">
-    
-                    <img src = "../1x/development_img/ZapADoodle Logo2.png" class="img2">
-            <!-- end of content -->
-            </div> 
+    <div id="lightgallery6">
+        <a href="../1x/development_img/PXL_20250401_171742673~2.jpg" width="100%" height="100%">
+            <img alt="Sketches for our instructions comic" src="../1x/development_img/PXL_20250401_171742673~2.jpg" class="img2"/>
+        </a>
+
+        <a href="../1x/development_img/ZapADoodle Logo2.png" width="100%" height="100%">
+            <img alt="Digital sketch of the logo!" src="../1x/development_img/ZapADoodle Logo2.png" class="img2"/>
+        </a>
+    </div>
+
             <div class = "footer">
             </div>
+
+        <!-- end of container -->
+            </div>
+
+
         </div>
+           
+
+   
+        
+
+        <!-- lightgallery plugins -->
+        <script src="../node_modules/lightgallery/lightgallery.umd.js"></script>
+        <script src="../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+        <script src="../node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>
+
+        <!-- lightgallery plugins -->
+        
+        <script type="text/javascript">
+            lightGallery(document.getElementById('lightgallery1'), {
+                plugins: [lgZoom, lgThumbnail],
+            });
+            lightGallery(document.getElementById('lightgallery2'), {
+                plugins: [lgZoom, lgThumbnail],
+            });
+            lightGallery(document.getElementById('lightgallery3'), {
+                plugins: [lgZoom, lgThumbnail],
+            });
+            lightGallery(document.getElementById('lightgallery4'), {
+                plugins: [lgZoom, lgThumbnail],
+            });
+            lightGallery(document.getElementById('lightgallery5'), {
+                plugins: [lgZoom, lgThumbnail],
+            });
+            lightGallery(document.getElementById('lightgallery6'), {
+                plugins: [lgZoom, lgThumbnail],
+            });
+        </script>
+
     </body>
     
     
