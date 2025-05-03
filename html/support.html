@@ -14,14 +14,6 @@
       opacity: 0;
       transform: translateY(-20px);
     }
-
-    #header-banner h1 {
-      font-size: 60pt;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-
     #support-section {
       width: 100%;
       padding: 100px 60px;
@@ -121,24 +113,25 @@
   </style>
 </head>
 <body>
-  <div id="page-wrapper">
+  <div id="container">
     <div id="navbar">
-      <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
-      <a href="productdescription.html" class="navbutton">PRODUCT</a>
-      <a href="zapteam.html" class="navbutton">ABOUT</a>
-      <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
-      <a href="support.html" class="navbutton">SUPPORT US</a>
-      <a href="webteam.html" class="navbutton">DEV TEAM</a>
+      <div class="navlinks">
+          <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
+          <a href="productdescription.html" class="navbutton">PRODUCT</a>
+          <a href="zapteam.html" class="navbutton">ABOUT</a>
+          <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
+          <a href="support.html" class="navbutton">SUPPORT US</a>
+          <a href="webteam.html" class="navbutton">DEV TEAM</a>
+      </div>
       <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
     </div>
+
+  <div class="header">
+    <h1 style="margin-top:35px;">Support our mission</h1>
   </div>
 
-  <div id="header-banner">
-    <h1>Support Our Mission</h1>
-  </div>
-
-  <div id="page-wrapper">
-    <div id="support-section">
+  <div class="section">
+    <div class="section" id="support-section">
       <p>Zap-a-Doodle started with the simple goal of making a party game that never loses its spark. Since then, we’ve prototyped, playtested, and iterated our design into one we truly love. This page is a glimpse into the care and strategy that went into our project.</p>
 
       <div class="canvas-section">
@@ -234,7 +227,24 @@
         <button>Become a Backer</button>
       </div>
     </div>
+    
   </div>
+
+  <div id="footer">
+    <div id="footer-content">
+        <img class="footerimg" src="../css/assets/zap_a_doodle_wordmark.png">
+        <div id="footer-links">
+            <a href="productdescription.html" class="footer-link">PRODUCT</a>
+            <a href="zapteam.html" class="footer-link">ABOUT</a>
+            <a href="prod_dev.html" class="footer-link">DEVELOPMENT</a>
+            <a href="support.html" class="footer-link">SUPPORT US</a>
+            <a href="webteam.html" class="footer-link">DEV TEAM</a>
+        </div>
+    </div>
+    <p class="rights">© 2025 Zap-A-Doodle. All Rights Reserved.</p>
+  </div>
+
+  </div><!--container end-->
 
   <script>
     $(document).ready(function() {
