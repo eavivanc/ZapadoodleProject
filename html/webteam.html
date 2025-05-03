@@ -6,9 +6,6 @@
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
-            .team-head {
-                text-align: center;
-            }
             .team-content {
                 display: flex;
                 flex-direction: row;
@@ -21,8 +18,8 @@
                 position: absolute;
                 width: 70px;
                 height: auto;
-                left: 7%;
-                top: 28%;
+                left: 15%;
+                top: 23%;
                 z-index: 10;
                 transform: rotate(-10deg);
             }
@@ -30,8 +27,8 @@
                 position: absolute;
                 width: 70px;
                 height: auto;
-                right: 7%;
-                top: 32%;
+                right: 15%;
+                top: 28%;
                 z-index: 10;
                 transform: rotate(10deg);
             }
@@ -61,27 +58,41 @@
             .team-intro {
                 text-align: left;
             }
+            @media (max-width:767px) {
+                .team-content {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0px auto;
+                    padding: 60px;
+                    gap: 30px;
+                }
+                .team-card {
+                    width: 100%;
+                    flex: none;
+                }
+            }
         </style>
     </head>
     <body>
         <div class = "container">
             <div id="navbar">
-                <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
-                <a href="productdescription.html" class="navbutton">PRODUCT</a>
-                <a href="zapteam.html" class="navbutton">ABOUT</a>
-                <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
-                <a href="support.html" class="navbutton">SUPPORT US</a>
-                <a href="webteam.html" class="navbutton">DEV TEAM</a>
+                <div class="navlinks">
+                    <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
+                    <a href="productdescription.html" class="navbutton">PRODUCT</a>
+                    <a href="zapteam.html" class="navbutton">ABOUT</a>
+                    <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
+                    <a href="support.html" class="navbutton">SUPPORT US</a>
+                    <a href="webteam.html" class="navbutton">DEV TEAM</a>
+                </div>
                 <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
-                <img class="iconbutton" src="../css/assets/searchbutton.png">
             </div>
-            <div class = "content">
+            <div class="header">
+                <p class="tagline">The website development team.</p>
+                <h1>Meet the devs!</h1>
                 <img src="../css/assets/lightning_bolt_star_2.svg" class="team-float-left">
                 <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right">
-                <div class="team-head">
-                    <p class="tagline">The website development team.</p>
-                    <h1>Meet the devs!</h1>
-                </div>
+            </div>
+            <div class = "section" style="padding-top: 0px;">
                 <div class="team-content">
                     <div class="team-card">
                         <img class="team-img" src="../css/assets/ph.jpeg">
@@ -90,16 +101,16 @@
                         <p class="team-intro">Self-intro here</p>
                     </div>
                     <div class="team-card">
-                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <img class="team-img" src="../css/assets/maxineimg.jpeg">
                         <p class="team-name">Maxine Ivey</p>
                         <p class="team-role">Developer</p>
-                        <p class="team-intro">Self-intro here</p>
+                        <p class="team-intro">A born and raised Chicagoan who has a passion for making a positive difference in this world: Student leader, an accomplished artist, and a karate champion. My long term goal is to redesign public institutional spaces that notably underserve communities of color.</p>
                     </div>
                     <div class="team-card">
-                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <img class="team-img" src="../css/assets/sarahimg.png">
                         <p class="team-name">Sarah Kwang</p>
                         <p class="team-role">Developer</p>
-                        <p class="team-intro">Self-intro here</p>
+                        <p class="team-intro">Sarah is a junior studying Design with a minor in Extended Reality Design and Development. She is  a multidisciplinary designer who strives to become a well-rounded creative where her passion for collaboration can help drive her ability to craft visual storytelling and memorable digital experiences. When she’s not designing silly things, you can catch her playing video games or napping with her cat Chubby.</p>
                     </div>
                     <div class="team-card">
                         <img class="team-img" src="../css/assets/ginaimg.png">
@@ -121,7 +132,18 @@
                     </div>
                 </div>
             </div>
-            <div class = "footer">
+            <div id="footer">
+                <div id="footer-brand">
+                    <img class="footerimg" src="../css/assets/zap_a_doodle_wordmark.png">
+                    <p class="rights">© 2025 Zap-A-Doodle. All Rights Reserved.</p>
+                </div>
+                <div id="footer-links">
+                    <a href="productdescription.html" class="footer-link">PRODUCT</a>
+                    <a href="zapteam.html" class="footer-link">ABOUT</a>
+                    <a href="prod_dev.html" class="footer-link">DEVELOPMENT</a>
+                    <a href="support.html" class="footer-link">SUPPORT US</a>
+                    <a href="webteam.html" class="footer-link">DEV TEAM</a>
+                </div>
             </div>
         </div>
     </body>
