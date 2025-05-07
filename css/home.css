@@ -56,14 +56,17 @@ a {
 .icon:hover {
     transform: rotate(5deg);
 }
-.iconbutton {
+.iconbutton, .menubutton {
     width: 20px;
     opacity: 0.5;
     transition: opacity 0.3s ease;
 }
-.iconbutton:hover {
+.iconbutton:hover, .menubutton:hover {
     opacity: 1;
     cursor: pointer;
+}
+.menubutton {
+    display: none;
 }
 .navcart {
     position: relative;
