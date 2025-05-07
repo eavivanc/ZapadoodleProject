@@ -45,7 +45,36 @@ $("#reviews-tab").on("click", function() {
 }
 );
 $("#shipping-tab").on("click", function() {
-    document.querySelector(".description-box").innerHTML = `"this is a shipping information"`;
+    document.querySelector(".description-box").innerHTML = `<h1 id = "shippingtitle">Standard Shipping Information</h1>
+<h3>Processing Time:</h3>
+<p class = 'shippinginfo'>Orders are processed within 1–2 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped.</p>
+
+<h3>Shipping Rates & Delivery Estimates:</h3>
+
+<p class = 'shippinginfo'> Shipping Method	Estimated Delivery Time	Cost</p>
+<p class = "shipptable">Standard Shipping (Domestic)	3–7 business days	Free / $5.00 flat rate <br>
+Expedited Shipping	2–3 business days	$10.00<br>
+International Shipping	7–21 business days	Calculated at checkout</p>
+
+
+<p class = 'shippinginfo'>Please note that delivery times may vary depending on your location and any potential delays with carriers.</p>
+
+<h3>Carriers Used:</h3>
+<p class = 'shippinginfo'>We typically ship via USPS, UPS, or FedEx, depending on the most efficient option for your destination.</p>
+
+<h3>Tracking Your Order:</h3>
+<p class = 'shippinginfo'>Once your order has shipped, you will receive a confirmation email with a tracking number you can use to follow its progress.</p>
+
+<h3>Shipping Restrictions:</h3>
+
+<p class = 'shippinginfo'> We do not ship to P.O. boxes (for certain carriers).</p>
+
+<p class = 'shippinginfo'>International customers are responsible for any customs or import taxes. </p>
+
+<h3>Questions?</h3>
+<p class = 'shippinginfo'> If you have any issues with your order or shipping status, please contact us at [your support email].</p>
+
+`;
 });
 
 function navigatetabs(){
@@ -58,7 +87,7 @@ $("#back-button").on("mouseover", function() {
     $(this).css("filter", "brightness(0.5)");
     $(this).css("cursor", "pointer");
 });
-$("#play_pause").on("mouseover", function() {
+$("#play-pause").on("mouseover", function() {
     $(this).css("filter", "brightness(0.5)");
     $(this).css("cursor", "pointer");
 });
@@ -69,7 +98,7 @@ $("#forward-button").on("mouseover", function() {
 $("#back-button").on("mouseout", function() {
     $(this).css("filter", "brightness(1)");
 });
-$("#play_pause").on("mouseout", function() {
+$("#play-pause").on("mouseout", function() {
     $(this).css("filter", "brightness(1)");
 });
 $("#forward-button").on("mouseout", function() {
@@ -98,22 +127,45 @@ step_description[5] = " bla bla bla6";
 step_description[6] = " bla bla bla7";
 step_description[7] = " bla bla bla8";
 
+let audio = new Array();
+
+audio[0] = "step1.mp3";
+
+
+document.querySelector("#play-pause").addEventListener("click", function() {
+
+    source = document.querySelector("#step-img").src;
+    for(i =0; i < steps.length; i++){
+
+        if(source == "http://127.0.0.1:5501" + steps[i]){
+
+            audio = new Audio("/css/assets/" + audio[i]);
+            audio.play();
+        }
+    }
+
+});
+
 
 
 document.querySelector("#back-button").addEventListener("click", function() {
    source = document.querySelector("#step-img").src;
+   
    for(i =0; i < steps.length; i++){
 
     if(source == "http://127.0.0.1:5501" + steps[i]){
         if(i == 0){
             source = steps[7];
             document.querySelector("#step-text").innerHTML = step_description[7];
-        }
+                 }
         else{
 
         source = steps[i-1];
         console.log(source);
-        document.querySelector("#step-text").innerHTML = step_description[i-1];}
+        document.querySelector("#step-text").innerHTML = step_description[i-1];
+       
+        
+    }
     }
    }
    document.querySelector("#step-img").src = source;
@@ -172,8 +224,27 @@ $(".close").on("click", function() {
 );
 
 document.querySelector(".add-to-cart-button").addEventListener("click", function() {
+
+
+
+   
+    document.cookie = itemnum;
+
     document.querySelector(".sidecart").style.right = "0px";
     document.querySelector(".product").style.left= "-400px";
     document.querySelector(".product").style.transition = "0.5s";
     document.querySelector(".sidecart").style.transition = "0.5s";
+
+    //document.querySelector(".cart-content").innerHTML = "";
+    var cartimg = document.querySelector(".product-image").src;
+    if(document.querySelector("#empty").innerHTML == " Your cart is empty. ")
+    {
+        document.querySelector("#empty").innerHTML = "";
+    }
+
+     document.querySelector(".cart-content").innerHTML += "<img id = 'cart-img' src = " + cartimg + ">";
+        document.querySelector(".cart-content").innerHTML += "<div> <h3>Zap-A-Doodle Game</h3> <in </div>";
+    itemnum +=1;
+    
 });
+
