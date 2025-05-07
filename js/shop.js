@@ -134,3 +134,8 @@ updateCartNumber();
     updateCartDisplay();
 
 });
+
+    /* clear cart after purchase */
+    $('#checkout-btn').on('click', function () {
+        localStorage.removeItem('cart');
+    });

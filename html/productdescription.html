@@ -11,7 +11,6 @@
     </head>
     <body>
         <div class = "container">
-
             <div id="cart-sidebar">
                 <div class="cart-top">
                     <p>Cart (<span class="cart-number">0</span>)</p>
@@ -42,17 +41,6 @@
                     <div class="cart-number">0</div>
                 </div>
             </div>
-            <div class = "sidecart">
-                <div class = "cart-header">
-                    <h1>Shopping Cart</h1>
-                    <button type="button" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                </div>
-                <div class = "cart-content">
-                    <p> Your cart is empty. </p>
-                </div>
-            </div>
 <!--
             <div class="header">
                 <p class="tagline">Shop Zap-A-Doodle now!</p>
@@ -79,23 +67,17 @@
                             </div>
                             <div id = "selection">
                                 <label > Select Marker Type:</label>
-                                <select class ="marker-type">
-                                    <option value="Vibrating">Vibrating</option>
-                                    <option value="Zapping">Zapping</option>
+                                <select id = "marker-type">
+                                    <option value="red">Vibrating</option>
+                                    <option value="blue">Zapping</option>
                                 </select>
                             </div>
                             <div id = "price">
                                 $29.99
                             </div>
                             <div id = "add-to-cart">
-                                <button class = "add-to-cart-button"
-                                data-name="Zap-A-Doodle Party Game"
-                                data-price="29.99"
-                                data-img="../css/assets/boxcover.jpeg">Add to Cart</button>
-                                <button class = "buy-now-button"
-                                data-name="Zap-A-Doodle Party Game"
-                                data-price="29.99"
-                                data-img="../css/assets/boxcover.jpeg">Buy Now</button>
+                                <button class = "add-to-cart-button">Add to Cart</button>
+                                <button class = "buy-now-button">Buy Now</button>
                             </div>
         
                         </div>
@@ -160,7 +142,7 @@
                 </div>
             </div>
         </div>
-    <script src = "../js/shop.js"></script>
-    <script src = "../js/productdescription.js"></script>
     </body>
+    <script src = "../js/shop.js"></script>
+<script src = "../js/productdescription.js"></script>
 </html>
