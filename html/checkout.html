@@ -6,72 +6,6 @@
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
-            .team-content {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                margin: 0px auto;
-                padding: 60px;
-                gap: 30px;
-            }
-            .team-float-left {
-                position: absolute;
-                width: 70px;
-                height: auto;
-                left: 15%;
-                top: 23%;
-                z-index: 10;
-                transform: rotate(-10deg);
-            }
-            .team-float-right {
-                position: absolute;
-                width: 70px;
-                height: auto;
-                right: 15%;
-                top: 28%;
-                z-index: 10;
-                transform: rotate(10deg);
-            }
-            .team-card {
-                display: flex;
-                flex-direction: column;
-                flex: 1;
-                padding: 25px;
-                min-width: 350px;
-                background-color: #0D68A9;
-                text-align: center;
-                border-radius: 5px;
-            }
-            .team-img {
-                width: 100%;
-                height: 500px;
-                object-fit: cover;
-            }
-            .team-name {
-                font-size: 1.5em;
-                margin-bottom: 5px;
-            }
-            .team-role {
-                margin-top:0;
-                color: rgba(255, 255, 255, 0.504);
-            }
-            .team-intro {
-                text-align: left;
-            }
-            @media (max-width:767px) {
-                .team-content {
-                    display: flex;
-                    flex-direction: column;
-                    margin: 0px auto;
-                    padding: 60px;
-                    gap: 30px;
-                }
-                .team-card {
-                    width: 100%;
-                    flex: none;
-                }
-            }
-
             .checkout-container {
                 display: flex;
                 flex-direction: row;
@@ -162,6 +96,15 @@
                 background-color: rgba(18, 18, 18, 0.906);
                 border-radius: 20px;
             }
+
+            @media (max-width:767px) {
+                .checkout-container {
+                    flex-direction: column;
+                }
+                .checkout-left, .checkout-right {
+                    width: 100%;
+                }
+            }
             
         </style>
     </head>
@@ -229,28 +172,28 @@
                             <div class="checkout-name">
                                 <div>
                                     <label for="first-name" class="form-section">First Name:</label>
-                                    <input type="text" id="first-name" style="width:100%;">
+                                    <input type="text" id="first-name" style="width:100%;" required>
                                 </div>
                                 <div>
                                     <label for="last-name" class="form-section">Last Name:</label>
-                                    <input type="text" id="last-name" style="width: 100%;">
+                                    <input type="text" id="last-name" style="width: 100%;" required>
                                 </div>
                             </div>
 
                             <label for="email" class="form-section">Email:</label>
-                            <input type="email" id="email" placeholder="janesmith@gmail.com" style="width: 100%;">
+                            <input type="email" id="email" placeholder="janesmith@gmail.com" style="width: 100%;" required>
 
                             <label for="number" class="form-section">Card Number:</label>
-                            <input type="number" id="number" style="width: 100%;">
+                            <input type="number" id="number" style="width: 100%;" required>
 
                             <div class="checkout-card">
                                 <div>
                                     <label for="dropdown" class="form-section">Expiration Date:</label>
-                                    <input type="month" id="dropdown">
+                                    <input type="month" id="dropdown" required>
                                 </div>
                                 <div>
                                     <label for="cvv" class="form-section">CVV:</label>
-                                    <input type="number" id="cvv" style="width: 50px;">
+                                    <input type="number" id="cvv" style="width: 50px;" required>
                                 </div>
                             </div>
 
