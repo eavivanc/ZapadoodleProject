@@ -147,3 +147,33 @@ document.querySelector("#forward-button").addEventListener("click", function() {
 
     
 });
+
+$("#cart").on("mouseover", function() {
+    $(this).css("cursor", "pointer");
+}
+);
+$(".close").on("mouseover", function() {
+    $(this).css("cursor", "pointer");
+}
+);
+
+$("#cart").on("click", function() {
+    
+document.querySelector(".sidecart").style.right = "0px";
+document.querySelector(".product").style.left= "-400px";
+document.querySelector(".product").style.transition = "0.5s";
+document.querySelector(".sidecart").style.transition = "0.5s";
+})
+
+$(".close").on("click", function() {
+    document.querySelector(".sidecart").style.right = "-100%";
+    document.querySelector(".sidecart").style.transition = "1s";
+}
+);
+
+document.querySelector(".add-to-cart-button").addEventListener("click", function() {
+    document.querySelector(".sidecart").style.right = "0px";
+    document.querySelector(".product").style.left= "-400px";
+    document.querySelector(".product").style.transition = "0.5s";
+    document.querySelector(".sidecart").style.transition = "0.5s";
+});

@@ -33,10 +33,12 @@
 }
 .product{
     display:flex;
+    
 }
 .main-container{
     display:flex;
     flex-direction: column;
+    padding-top:0px;
 }
 .info{
     display:flex;
@@ -160,4 +162,27 @@ width:70px;
 }
 h2{
     margin-left:40px;
+}
+
+.sidecart{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    color:black;
+    position: fixed;
+    right: -100%;
+    width:300px;
+}
+.cart-header{
+    display: flex;
+    justify-content: space-evenly;
+}
+.close{
+    width:30px;
+    height:30px;
+    font-size: 20pt;
+    margin-top:20px;
+    background: transparent;
+    border: none;
+    
 }
