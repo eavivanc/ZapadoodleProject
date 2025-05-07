@@ -18,30 +18,68 @@ $(".thumbnail").on("click", function() {
 $(".tab").on("mouseover", function() {
     $(this).css("cursor", "pointer");
 
+    $(this).css("background-color", "#FFE45C");
+    $(this).css("color", "black");
+    $(this).css("transition", "0.5s");
+
+
 });
+$(".tab").on("mouseout", function() {
+
+    $(this).css("background-color", "#062943");
+    $(this).css("color", "white");
+    $(this).css("cursor", "reset");
+    $(this).css("transition", "0.5s");
+});
+
 
 document.querySelector(".add-to-cart-button").addEventListener("mouseover", function() {
-   document.querySelector(".add-to-cart-button").style.filter = "brightness(0.7)";
+   document.querySelector(".add-to-cart-button").style.filter = "opacity(0.7)";
+   document.querySelector(".add-to-cart-button").style.cursor = "pointer";
+    document.querySelector(".add-to-cart-button").style.transition = "0.5s";
+    document.querySelector(".add-to-cart-button").style.color = "white";
+    document.querySelector(".add-to-cart-button").style.backgroundColor = "#0D68A9";
 });
 document.querySelector(".add-to-cart-button").addEventListener("mouseout", function() {
-   document.querySelector(".add-to-cart-button").style.filter = "brightness(1)";
+   document.querySelector(".add-to-cart-button").style.filter = "opacity(1)";
+    document.querySelector(".add-to-cart-button").style.cursor = "reset";
+     document.querySelector(".add-to-cart-button").style.transition = "0.5s";
+     document.querySelector(".add-to-cart-button").style.color = "black";
+     document.querySelector(".add-to-cart-button").style.backgroundColor = "#FFE45C";
 });
 document.querySelector(".buy-now-button").addEventListener("mouseover", function() {
-    document.querySelector(".buy-now-button").style.filter = "brightness(0.7)";});
+    document.querySelector(".buy-now-button").style.filter = "opacity(0.7)";
+    document.querySelector(".buy-now-button").style.cursor = "pointer";
+    document.querySelector(".buy-now-button").style.transition = "0.5s";
+    document.querySelector(".buy-now-button").style.color = "white";
+    document.querySelector(".buy-now-button").style.backgroundColor = "#0D68A9";
+
+});
 document.querySelector(".buy-now-button").addEventListener("mouseout", function() {
-    document.querySelector(".buy-now-button").style.filter = "brightness(1)";
+    document.querySelector(".buy-now-button").style.filter = "opacity(1)";
+    document.querySelector(".buy-now-button").style.cursor = "reset";
+    document.querySelector(".buy-now-button").style.transition = "0.5s";
+    document.querySelector(".buy-now-button").style.color = "black";
+    document.querySelector(".buy-now-button").style.backgroundColor = "#FF9C39";
 });
 
 
 
 
 
-var description_info = document.querySelector(".description-box").innerHTML;
+const description_info = document.querySelector(".description-box").innerHTML;
 $("#description-tab").on("click", function() {
     document.querySelector(".description-box").innerHTML = description_info;
 });
 $("#reviews-tab").on("click", function() {
-    document.querySelector(".description-box").innerHTML = `"this is a review"`;
+    document.querySelector(".description-box").innerHTML = "<h1 id = 'reviewtitle'>Customer Reviews</h1>";
+    document.querySelector(".description-box").createElement("div");
+    
+
+
+
+
+    
 }
 );
 $("#shipping-tab").on("click", function() {
