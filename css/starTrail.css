@@ -1,30 +1,31 @@
 body {
-    cursor: none;
-  }
-  
-  .star {
-    position: fixed;
-    width: 8px;
-    height: 12px;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-  }
-  
-  .star::before,
-  .star::after {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 12px;
-    background: #FFE45C;
-    transform: skewX(22.5deg) skewY(22.5deg);
-  }
-  
-  .star::before {
-    transform: rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
-  }
-  
-  .star::after {
-    transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
-  }
+  cursor: none;
+}
+
+.star {
+  position: fixed;
+  width: 8px;
+  height: 12px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Use a CSS variable for the color, default to yellow if not set */
+.star::before,
+.star::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: var(--star-color, #FFE45C);
+  transform: skewX(22.5deg) skewY(22.5deg);
+}
+
+.star::before {
+  transform: rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+.star::after {
+  transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
+}
