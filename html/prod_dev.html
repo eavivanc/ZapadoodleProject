@@ -3,14 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Product Development</title>
+
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lightgallery.css" />
         <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-thumbnail.css" />
         <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-zoom.css" />
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <style> 
+        <style>
+        
+            h1{
+                font-size:10vw;
+            }
+
+            p{
+
+            }
 
             body {
             cursor: none; /* hide system cursor */
@@ -30,7 +41,7 @@
             filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
             }
 
-            .team-float-right {
+            /* .team-float-right {
                 position: absolute;
                 width: 150px;
                 height: auto;
@@ -38,20 +49,26 @@
                 top: 18%;
                 z-index: 10;
                 transform: rotate(10deg);
-            }
+            } */
 
             .text{
                 padding-left:20px;
                 margin-right:20px;
-                width:600px;
+                max-width:600px;
+                width:100%;
+                font-size:0.2vw;
             }
 
             .flex{
                 display:flex;
+                /* flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px; */
             }
 
             .img2{
                 width:600px;
+                max-width:100%;
                 height:auto;
                 max-height:500px;
                 object-fit: cover;
@@ -72,6 +89,31 @@
                 max-width: 1250px;
 
             }
+
+            @media (max-width: 768px) {
+            .text {
+                padding: 0 10px;
+                margin: 0 auto;
+            }
+
+            .team-float-right {
+                display: none; /* Hide decorative float on small screens */
+            }
+
+            .navlinks {
+                display: none; /* Show mobile nav instead */
+            }
+
+            /* .mobile-links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            } */
+
+            #content {
+                padding: 0 10px;
+            }
+        }
 
 
         </style>
@@ -128,7 +170,7 @@
 
             <!-- header -->
              <div class="header">
-                <p class="tagline">The process behind Zap-A-Doodle.</p>
+                <p class="tagline">The process behind Zap-a-Doodle.</p>
                 <h1>Development</h1>
                 <!-- <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right"> -->
             </div>
