@@ -71,10 +71,28 @@
                     flex: none;
                 }
             }
+            
         </style>
     </head>
     <body>
         <div class = "container">
+
+            <div id="cart-sidebar">
+                <div class="cart-top">
+                    <p>Cart (<span class="cart-number">0</span>)</p>
+                    <img class="x-icon" src="../css/assets/x.png" alt="X Icon">
+                </div>
+                <div class="cart-items"></div>
+                <div class="cart-bottom">
+                    <div class="cart-total">
+                        <p>Total:</p>
+                        <p class="total">$0.00</p>
+                    </div>
+                    <p class="cart-subtitle">Discounts or additional fees may apply at checkout.</p>
+                    <a href="checkout.html" class="checkout-link">Proceed to Checkout</a>
+                </div>
+            </div>
+
             <div id="navbar">
                 <div class="navlinks">
                     <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
@@ -84,8 +102,12 @@
                     <a href="support.html" class="navbutton">SUPPORT US</a>
                     <a href="webteam.html" class="navbutton">DEV TEAM</a>
                 </div>
-                <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+                <div class="navcart">
+                    <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+                    <div class="cart-number">0</div>
+                </div>
             </div>
+            
             <div class="header">
                 <p class="tagline">The website development team.</p>
                 <h1>Meet the devs!</h1>
@@ -95,10 +117,10 @@
             <div class = "section" style="padding-top: 0px;">
                 <div class="team-content">
                     <div class="team-card">
-                        <img class="team-img" src="../css/assets/ph.jpeg">
+                        <img class="team-img" src="../css/assets/costabio.jpeg">
                         <p class="team-name">Costa Tzoytzoyrakos</p>
                         <p class="team-role">Developer</p>
-                        <p class="team-intro">Self-intro here</p>
+                        <p class="team-intro">Costa Tzoytzoyrakos is a Cognitive Science major with a focus on brand identity and visual design for startups and creative ventures. He also works as a photographer and enjoys writing and producing music in his free time.</p>
                     </div>
                     <div class="team-card">
                         <img class="team-img" src="../css/assets/maxineimg.jpeg">
@@ -146,7 +168,8 @@
                 </div>
             </div>
         </div>
+    <script src="../js/shop.js"></script>
+    <script src="../js/cursor.js"></script>
+
     </body>
-    
-    
 </html>

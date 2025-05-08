@@ -11,6 +11,22 @@
     </head>
     <body>
         <div class = "container">
+            <div id="cart-sidebar">
+                <div class="cart-top">
+                    <p>Cart (<span class="cart-number">0</span>)</p>
+                    <img class="x-icon" src="../css/assets/x.png" alt="X Icon">
+                </div>
+                <div class="cart-items"></div>
+                <div class="cart-bottom">
+                    <div class="cart-total">
+                        <p>Total:</p>
+                        <p class="total">$0.00</p>
+                    </div>
+                    <p class="cart-subtitle">Discounts or additional fees may apply at checkout.</p>
+                    <a href="checkout.html" class="checkout-link">Proceed to Checkout</a>
+                </div>
+            </div>
+
             <div id="navbar">
                 <div class="navlinks">
                     <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
@@ -20,17 +36,19 @@
                     <a href="support.html" class="navbutton">SUPPORT US</a>
                     <a href="webteam.html" class="navbutton">DEV TEAM</a>
                 </div>
-                <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+                <div class="navcart">
+                    <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+                    <div class="cart-number">0</div>
+                </div>
             </div>
-
-            hello
-
+            
+<!--
             <div class="header">
                 <p class="tagline">Shop Zap-A-Doodle now!</p>
                 <h1>Buy</h1>
-            </div>    
+            </div>    -->
 
-            <div class = "section main-container">
+            <div class = "section main-container" id = "main">
                 <div class = "product">
                     <div class = "image-gallery">
                         <img src="../css/assets/boxcover.jpeg" alt="Product Image" class = "product-image">
@@ -51,16 +69,22 @@
                             <div id = "selection">
                                 <label > Select Marker Type:</label>
                                 <select id = "marker-type">
-                                    <option value="red">Vibrating</option>
-                                    <option value="blue">Zapping</option>
+                                    <option value="Vibrating">Vibrating</option>
+                                    <option value="Zapping">Zapping</option>
                                 </select>
                             </div>
                             <div id = "price">
                                 $29.99
                             </div>
                             <div id = "add-to-cart">
-                                <button class = "add-to-cart-button">Add to Cart</button>
-                                <button class = "buy-now-button">Buy Now</button>
+                                <button class = "add-to-cart-button"
+                                data-name="Zap-A-Doodle Party Game"
+                                data-price="29.99"
+                                data-img="../css/assets/boxcover.jpeg">Add to Cart</button>
+                                <button class="buy-now-button"
+                                data-name="Zap-A-Doodle Party Game"
+                                data-price="29.99"
+                                data-img="../css/assets/boxcover.jpeg">Buy Now</button>
                             </div>
         
                         </div>
@@ -97,14 +121,14 @@
                                     <strong>Battery:</strong> 2 AAA batteries (not included)<br>
                                 </p>
                         </div>
-                        <p> How to Play : </p>
-                        <img id = "step-img" src = "../1x/step5.png" alt = "Step 1">
+                        <p id ="instructionstitle"> How to Play </p>
+                        <img id = "step-img" src = "../1x/step1.png" alt = "Step 1">
                         <div id = "step-text">
-                            DESCRIPTION OF STEP 1 (voiced over)
+                             To start the game form two teams of at least two players each.
                         </div>
                         <div id = "walkthrough-nav">
                             <img id = back-button src = "../1x/back.png" alt = "Back">
-                            
+                            <img id = "play-pause" src = "/1x/play.png" alt = "Play/Pause">
                             <img id = "forward-button" src = "../1x/forward.png" alt = "Forward">
                         </div>
                         
@@ -126,5 +150,7 @@
             </div>
         </div>
     </body>
-<script src = "/js/productdescription.js"></script>
+    <script src = "../js/shop.js"></script>
+    <script src = "../js/productdescription.js"></script>
+    <script src="../js/cursor.js"></script>
 </html>

@@ -114,7 +114,23 @@
 </head>
 <body>
   <div id="container">
-    <div id="navbar">
+    <div id="cart-sidebar">
+      <div class="cart-top">
+          <p>Cart (<span class="cart-number">0</span>)</p>
+          <img class="x-icon" src="../css/assets/x.png" alt="X Icon">
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-bottom">
+          <div class="cart-total">
+              <p>Total:</p>
+              <p class="total">$0.00</p>
+          </div>
+          <p class="cart-subtitle">Discounts or additional fees may apply at checkout.</p>
+          <a href="checkout.html" class="checkout-link">Proceed to Checkout</a>
+      </div>
+  </div>
+
+  <div id="navbar">
       <div class="navlinks">
           <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
           <a href="productdescription.html" class="navbutton">PRODUCT</a>
@@ -123,8 +139,11 @@
           <a href="support.html" class="navbutton">SUPPORT US</a>
           <a href="webteam.html" class="navbutton">DEV TEAM</a>
       </div>
-      <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
-    </div>
+      <div class="navcart">
+          <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+          <div class="cart-number">0</div>
+      </div>
+  </div>
 
   <div class="header">
     <h1 style="margin-top:35px;">Support our mission</h1>
@@ -268,5 +287,8 @@
       reveal();
     });
   </script>
+      <script src="../js/shop.js"></script>
+      <script src="../js/cursor.js"></script>
+
 </body>
 </html>

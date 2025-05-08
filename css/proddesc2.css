@@ -33,20 +33,23 @@
 }
 .product{
     display:flex;
+    
 }
 .main-container{
     display:flex;
     flex-direction: column;
+    padding-top:0px;
 }
 .info{
     display:flex;
     flex-direction: column;
+
 }
 .tabs{
     margin-top:30px;
    
     display:flex;
-    margin-right:800px;
+    margin-left:20px;
    
 }
 .tab{
@@ -56,6 +59,8 @@
     padding-right:10px;
     padding-top:5px;
     padding-bottom:5px;
+    border-radius: 5px;
+    
  
     
 }
@@ -66,6 +71,7 @@
    flex-direction: column;
    min-height: 400px;
    border-radius: 20px;
+   padding-bottom:30px;
 }
 #price{
     font-size: 16pt;
@@ -135,6 +141,9 @@ width:70px;
 #forward-button{
     width:70px;
 }
+#play-pause{
+    width:70px;
+}
 
 #play_pause{
     width:100px;
@@ -161,3 +170,82 @@ width:70px;
 h2{
     margin-left:40px;
 }
+
+.sidecart{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    color:black;
+    position: fixed;
+    right: -100%;
+    width:300px;
+}
+.cart-header{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cart-content{
+    display: flex;
+}
+.close{
+    width:30px;
+    height:30px;
+    font-size: 20pt;
+    margin-top:20px;
+    background: transparent;
+    border: none;
+    
+}
+
+#cart-img{
+    width: 70px;
+    height: 70px;
+    margin-top:5px;
+    margin-left: 10px;
+    padding:10px;
+}
+
+#instructionstitle{
+    font-size: 25pt;
+    color:#FFE45C;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-family: 'instrument-sans-variable',sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.calculations{
+    margin-left: 20px;
+    line-height: 20pt;
+    margin-top :20px;
+    margin-bottom:30px;
+    font-size: 14pt;
+}
+
+#shippingtitle{
+text-align: center;
+text-decoration: underline;
+}
+h3{
+    margin-left:20px;
+    font-style: italic;
+}
+.shippinginfo{
+    margin-left: 20px;
+    line-height: 16pt;
+    margin-top :20px;
+    margin-bottom:30px;
+    width:800px;
+    font-size: 14pt;
+}
+.shipptable{
+    margin-left: 20px;
+    line-height: 18pt;
+    margin-top :20px;
+    margin-bottom:30px;
+    width:800px;
+    font-size: 14pt;
+    border: #062943 solid 2px;
+    padding:15px;
+}
+

@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>Zap-A-Doodle</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
             /* landing */
             #landing {
@@ -160,6 +161,22 @@
     </head>
     <body>
         <div id="container">
+            <div id="cart-sidebar">
+                <div class="cart-top">
+                    <p>Cart (<span class="cart-number">0</span>)</p>
+                    <img class="x-icon" src="../css/assets/x.png" alt="X Icon">
+                </div>
+                <div class="cart-items"></div>
+                <div class="cart-bottom">
+                    <div class="cart-total">
+                        <p>Total:</p>
+                        <p class="total">$0.00</p>
+                    </div>
+                    <p class="cart-subtitle">Discounts or additional fees may apply at checkout.</p>
+                    <a href="checkout.html" class="checkout-link">Proceed to Checkout</a>
+                </div>
+            </div>
+
             <div id="navbar">
                 <div class="navlinks">
                     <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
@@ -169,7 +186,10 @@
                     <a href="support.html" class="navbutton">SUPPORT US</a>
                     <a href="webteam.html" class="navbutton">DEV TEAM</a>
                 </div>
-                <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+                <div class="navcart">
+                    <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
+                    <div class="cart-number">0</div>
+                </div>
             </div>
             
          <div id="landing">
@@ -209,7 +229,7 @@
         <div class="section" id="support">
             <h2>Support us!</h2>
             <p class="supportcopy">Love the chaos? Help us keep the buzz alive! Your donation fuels development, better shocks (we mean features), and helps our small team bring the fun to more players worldwide.</p>
-            <a href="support.html"class="donate-button">DONATE</a>
+            <a class="donate-button" href="support.html">DONATE</a>
         </div>
 
         <div id="footer">
@@ -227,5 +247,8 @@
         </div>
 
         </div><!--container end-->
+    <script src="../js/shop.js"></script>
+    <script src="../js/cursor.js"></script>
+
     </body>
 </html>
