@@ -8,8 +8,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 40px 0;
-      gap: 40px;
+      margin: 40px auto;
+      gap: 10px;
+      width: 50%;
     }
 
     .group-placeholder {
@@ -31,26 +32,37 @@
 
     .bios {
       display: flex;
-      justify-content: space-around;
-      padding: 40px 0;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: space-evenly;
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    .bio {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 50px;
+      width: 100%;
     }
 
     .bio-box {
       background-color: #0D68A9;
-      padding: 20px;
-      width: 300px;
+      padding: 30px;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
       border-radius: 16px;
+      box-sizing: border-box; 
     }
 
     .bio-img-container {
-        width: 200px;
+        min-width: 200px;
         height: 200px;
         border-radius: 60%;
-        margin: 0 auto 20px;
         overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border: 5px solid #FF5050; 
     }
 
@@ -72,6 +84,7 @@
 
     .bio h3 {
       font-weight: 700;
+      margin-top: 0;
       margin-bottom: 4px;
       text-align: center;
     }
@@ -113,9 +126,33 @@
     }
     .character-graphic {
         display: block;
-        margin: 0 auto 40px auto;
+        margin: 0 auto 20px auto;
         width: 460px;
-        max-width: 100%;
         height: auto;
         filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
     }
+    hr {
+      width: 100%;
+    }
+
+    @media (max-width:767px) {
+      .bios {
+        gap: 20px;
+      }
+      .bio {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px auto;
+        padding: 60px;
+        gap: 20px;
+      }
+      .bio-box {
+        width: 100%;
+        flex: none;
+      }
+      .bio-img-container {
+        width: 300px;
+        min-height: 300px;
+    }
+
+  }
