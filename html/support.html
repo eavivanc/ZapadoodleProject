@@ -98,36 +98,56 @@
       margin-bottom: 20px;
     }
     .fade-in {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
     @media (max-width: 768px) {
-      .cta-block form {
-        flex-direction: column;
-        align-items: center;
+      body {
+        font-size: 16px;
       }
-      .cta-block input,
-      .cta-block button {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-      #support-section {
-        padding: 40px 16px;
-      }
-      .content-block {
-        padding: 40px 16px;
-      }
-      .content-block h2,
-      .cta-block h2 {
+
+      h1, h2 {
         font-size: 1.5rem;
       }
 
+      #support-section,
+      .content-block,
+      .cta-block {
+        padding: 20px 16px;
+      }
+
       .canvas-section img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .cta-block form {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .cta-block input,
+      .cta-block button {
+        max-width: 100%;
         width: 100%;
       }
-      #container {
+
+      canvas {
         width: 100%;
+        height: auto;
+      }
+
+      #navbar .navlinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #navbar .navbutton {
+        display: block;
+        font-size: 1rem;
+        padding: 10px 0;
       }
     }
   </style>
@@ -311,8 +331,29 @@
       };
       $(window).on('scroll', reveal);
       reveal();
+
+    //subscribe form
+
+    $('#subscribe-form').on('submit', function(e) {
+      e.preventDefault();
+
+      const email = $('#email').val();
+      if (!email) return;
+
+    $('#subscribe-confirm')
+      .html(`Thanks for subscribing! We’ll be in touch soon.`)
+      .fadeIn()
+      .delay(4000)
+      .fadeOut();
+
+  });
     });
+
   </script>
-  <script src="../js/shop.js"></script>
+  <div id="custom-cursor"></div>
+  
+  </body>
+    <script src="../js/shop.js"></script>
+    <script src="../js/cursor.js"></script>
 </body>
 </html>
