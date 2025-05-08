@@ -191,11 +191,11 @@ let step_description = new Array();
 step_description[0] = "To start the game form two teams of at least two players each.";
 step_description[1] = "Assign one player on your team to draw with the vibrating or zapping pen, one player on the opposing team will control the buzzer.";
 step_description[2] = "The player who is drawing takes a look at the word their team is trying to guess and hands the card to the opposing player controlling the buzzer. ";
-step_description[3] = " The opposing team starts the buzzer!";
-step_description[4] = " bla bla bla5";
-step_description[5] = " bla bla bla6";
-step_description[6] = " bla bla bla7";
-step_description[7] = " bla bla bla8";
+step_description[3] = "The opposing team starts the buzzer!";
+step_description[4] = "The drawing player has to draw the guess word on the card and have their teammates guess correctly without saying the 'buzz words'.";
+step_description[5] = "If the artist gets 3 zaps or the timer ends, the round is over.";
+step_description[6] = "Keep track of how many cards your team guessed correctly and add them to your score.";
+step_description[7] = "Pass the pen to the opposing team to start the next round! The game is over when everyone has had two turns drawing. The team with the most points wins!";
 
 let audio = new Array();
 
@@ -291,11 +291,13 @@ document.querySelector("#forward-button").addEventListener("click", function() {
             if(i == steps.length - 1){
                 source = steps[0];
                 document.querySelector("#step-text").innerHTML = step_description[0];
+                
             }
             else{
 
             source = steps[i+1];
             console.log(source);
+            
             document.querySelector("#step-text").innerHTML = step_description[i+1];}
             
         }
