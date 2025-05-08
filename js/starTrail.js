@@ -20,26 +20,14 @@ for (let i = 0; i < 5; i++) {
     positions.forEach((pos, index) => {
       pos.x += (x - pos.x) * 0.3;
       pos.y += (y - pos.y) * 0.3;
-    
+  
       const star = stars[index];
       star.style.left = `${pos.x}px`;
       star.style.top = `${pos.y}px`;
-    
-      const yellow = [255, 228, 92]; // #FFE45C
-      const red = [255, 80, 80];    // #0080FF
-    
-      const r = Math.round(yellow[0] + (blue[0] - yellow[0]) * (index / (stars.length - 1)));
-      const g = Math.round(yellow[1] + (blue[1] - yellow[1]) * (index / (stars.length - 1)));
-      const b = Math.round(yellow[2] + (blue[2] - yellow[2]) * (index / (stars.length - 1)));
-    
-      const color = `rgb(${r}, ${g}, ${b})`;
-    
-      star.style.setProperty('--star-color', color);
-    
+  
       x = pos.x;
       y = pos.y;
     });
-      
   
     requestAnimationFrame(animateStars);
   }
