@@ -1,15 +1,20 @@
-$(document).ready(function () {
-    const defaultCursor = 'url("css/assets/star.png") 16 16, auto';
-    const hoverCursor = 'url("css/assets/lightning-bolt.png") 16 16, auto';
-
-    $('body').css('cursor', defaultCursor);
-
-    $('img').hover(
-        function () {
-            $(this).css('cursor', hoverCursor);
-        },
-        function () {
-            $(this).css('cursor', defaultCursor);
-        }
-    );
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const cursor = document.getElementById("custom-cursor");
+  
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+  
+    const images = document.querySelectorAll("img");
+  
+    images.forEach((img) => {
+      img.addEventListener("mouseenter", () => {
+        cursor.style.backgroundImage = 'url("css/assets/lightning-bolt.png")';
+      });
+      img.addEventListener("mouseleave", () => {
+        cursor.style.backgroundImage = 'url("css/assets/star.png")';
+      });
+    });
+  });
+  
