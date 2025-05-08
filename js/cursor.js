@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    const defaultCursor = 'url("/css/assets/star.png") 16 16, auto';
-    const hoverCursor = 'url("/css/assets/lightning-bolt.png") 16 16, auto';
+    const defaultCursor = 'url("data:image/png;base64,iVBORw0KGgoAAA...") 16 16, auto';
+    const hoverCursor = 'url("data:image/png;base64,iVBORw0KAAABBB...") 16 16, auto';
 
     $('body').css('cursor', defaultCursor);
 
