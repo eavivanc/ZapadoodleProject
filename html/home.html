@@ -3,6 +3,7 @@
     <head>
 
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zap-A-Doodle</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -107,11 +108,6 @@
                 background-color: #ffa94d;
             }
 
-            @media (max-width:767px) {
-                #landing {
-                    min-height: 100vh;
-                }
-            }
             .landingimg-wrapper {
                 position: absolute;
                 top: 180px;
@@ -145,24 +141,37 @@
                 transform: scale(1.01) rotate(1deg);
             }
             }
-            body {
-  cursor: none; /* hide system cursor */
-}
+        body {
+        cursor: none; /* hide system cursor */
+        }
 
-#custom-cursor {
-  width: 48px;
-  aspect-ratio: 1 / 1;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  background-image: url("../css/assets/star.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.1s ease;
-  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
-}
+        #custom-cursor {
+        width: 48px;
+        aspect-ratio: 1 / 1;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        background-image: url("../css/assets/star.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.1s ease;
+        filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+        }
 
+        @media (max-width:767px) {
+                #container {
+                    width: 100%;
+                }
+                #landing {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin-bottom: -150px;
+                }
+                #landing .tagline {
+                    width: 70%;
+                }
+            }
         </style>
         <script>
             window.addEventListener("load", function () {
@@ -196,6 +205,9 @@
             </div>
 
             <div id="navbar">
+                <div class="mobile-nav">
+                    <img class="icon" src="../css/assets/zap_a_doodle_icon.png">
+                </div>
                 <div class="navlinks">
                     <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
                     <a href="productdescription.html" class="navbutton">PRODUCT</a>

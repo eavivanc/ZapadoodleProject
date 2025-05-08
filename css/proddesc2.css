@@ -1,5 +1,3 @@
-
-
 .image-thumbnails{
     
     display:flex;
@@ -169,40 +167,6 @@ width:70px;
 }
 h2{
     margin-left:40px;
-}
-
-.sidecart{
-    display: flex;
-    flex-direction: column;
-    background-color: antiquewhite;
-    color:black;
-    position: fixed;
-    right: -100%;
-    width:300px;
-}
-.cart-header{
-    display: flex;
-    justify-content: space-evenly;
-}
-.cart-content{
-    display: flex;
-}
-.close{
-    width:30px;
-    height:30px;
-    font-size: 20pt;
-    margin-top:20px;
-    background: transparent;
-    border: none;
-    
-}
-
-#cart-img{
-    width: 70px;
-    height: 70px;
-    margin-top:5px;
-    margin-left: 10px;
-    padding:10px;
 }
 
 #instructionstitle{
