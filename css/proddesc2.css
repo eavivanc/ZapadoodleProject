@@ -67,7 +67,7 @@
     background-color:#0D68A9 ;
     display: flex;
    flex-direction: column;
-   height: 1100px;
+   min-height: 1100px;
    border-radius: 20px;
    padding-bottom:30px;
 }
@@ -235,4 +235,12 @@ h3{
     cursor:grab;
     margin : auto;
 
+}
+
+#SHIPPING{
+    width:100%;
+}
+
+#description-text{
+    width:100%;
 }
