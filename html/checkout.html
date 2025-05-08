@@ -125,6 +125,13 @@
                 .checkout-left, .checkout-right {
                     width: 100%;
                 }
+                .method-options {
+                    flex-direction: column;
+                }
+                .checkout-card {
+                    flex-direction: column;
+                    gap: 0px;
+                }
             }
             
         </style>
@@ -150,6 +157,17 @@
             </div>
 
             <div id="navbar">
+                <div class="mobile-nav">
+                    <img class="icon" src="../css/assets/zap_a_doodle_icon.png">
+                </div>
+                <div class="mobile-links">
+                    <a href="home.html" class="navbutton">HOME</a>
+                    <a href="productdescription.html" class="navbutton">PRODUCT</a>
+                    <a href="zapteam.html" class="navbutton">ABOUT</a>
+                    <a href="prod_dev.html" class="navbutton">DEVELOPMENT</a>
+                    <a href="support.html" class="navbutton">SUPPORT US</a>
+                    <a href="webteam.html" class="navbutton">DEV TEAM</a>
+                </div>
                 <div class="navlinks">
                     <a href="home.html"><img class="icon" src="../css/assets/zap_a_doodle_icon.png"></a>
                     <a href="productdescription.html" class="navbutton">PRODUCT</a>
@@ -240,5 +258,7 @@
         </div>
     <script src="../js/shop.js"></script>
     <script src="../js/cursor.js"></script>
+    <script src="../js/mobilenav.js"></script>
+
     </body>
 </html>
