@@ -13,7 +13,7 @@ updateCartNumber();
     /* add to cart */
     $(".add-to-cart-button").on("click", function(){
         /* create item */
-        const itemType = $(".marker-type").val();
+        const itemType = $("#marker-type").val();
         console.log("Selected type:", itemType);   
         const item = {
             "name": $(this).data("name"),
@@ -40,6 +40,38 @@ updateCartNumber();
         updateCartDisplay();
         updateCartNumber();
     });
+
+    /* buy now button */
+    $(".buy-now-button").on("click", function(){
+        /* create item */
+        const itemType = $("#marker-type").val();
+        const item = {
+            "name": $(this).data("name"),
+            "price": $(this).data("price"),
+            "img": $(this).data("img"),
+            "type": itemType,
+            "qty": 1
+        }
+        /* add item to array */
+        let itemExists = false;
+        for (let i = 0; i < cart.length; i++ ){
+            if (cart[i].name == item.name && cart[i].type == item.type){
+                cart[i].qty += item.qty;
+                itemExists = true;
+                break;
+            }
+        }
+        if(!itemExists) {
+            cart.push(item);
+        }
+        /* convert back to string */
+        localStorage.setItem('cart', JSON.stringify(cart));
+        /* display new item */
+        updateCartDisplay();
+        updateCartNumber();
+        /* open checkout */
+        window.open("../html/checkout.html");
+    })
 
     /* load cart */
     function updateCartDisplay(){

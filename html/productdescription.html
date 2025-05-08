@@ -2,15 +2,53 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Product Description</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <link rel="stylesheet" type="text/css" href="../css/proddesc2.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
+            body {
+  cursor: none; /* hide system cursor */
+}
+
+#custom-cursor {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("../css/assets/star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.1s ease;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+}
+@media (max-width:767px) {
+                .product {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .image-gallery, .product-details {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .product-image, .image-thumbnails {
+                    width: 90%;
+                    height: auto;
+                }
+            }
         </style>
     </head>
     <body>
-        <div class = "container">
+        <div id="custom-cursor"></div>
+        <div class = "container"></div>
+    <body>
+        <div id="container">
             <div id="cart-sidebar">
                 <div class="cart-top">
                     <p>Cart (<span class="cart-number">0</span>)</p>
@@ -41,13 +79,6 @@
                     <div class="cart-number">0</div>
                 </div>
             </div>
-            
-<!--
-            <div class="header">
-                <p class="tagline">Shop Zap-A-Doodle now!</p>
-                <h1>Buy</h1>
-            </div>    -->
-
             <div class = "section main-container" id = "main">
                 <div class = "product">
                     <div class = "image-gallery">
@@ -69,8 +100,8 @@
                             <div id = "selection">
                                 <label > Select Marker Type:</label>
                                 <select id = "marker-type">
-                                    <option value="red">Vibrating</option>
-                                    <option value="blue">Zapping</option>
+                                    <option value="Vibrating">Vibrating</option>
+                                    <option value="Zapping">Zapping</option>
                                 </select>
                             </div>
                             <div id = "price">
@@ -81,7 +112,7 @@
                                 data-name="Zap-A-Doodle Party Game"
                                 data-price="29.99"
                                 data-img="../css/assets/boxcover.jpeg">Add to Cart</button>
-                                <button class = "buy-now-button"
+                                <button class="buy-now-button"
                                 data-name="Zap-A-Doodle Party Game"
                                 data-price="29.99"
                                 data-img="../css/assets/boxcover.jpeg">Buy Now</button>
@@ -151,5 +182,6 @@
         </div>
     </body>
     <script src = "../js/shop.js"></script>
-<script src = "../js/productdescription.js"></script>
+    <script src = "../js/productdescription.js"></script>
+    <script src="../js/cursor.js"></script>
 </html>

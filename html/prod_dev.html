@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Product Development</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lightgallery.css" />
@@ -9,6 +10,23 @@
         <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-zoom.css" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style> 
+        body {
+  cursor: none; /* hide system cursor */
+}
+
+#custom-cursor {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("../css/assets/star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.1s ease;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+}
             .team-float-right {
                 position: absolute;
                 width: 150px;
@@ -51,6 +69,7 @@
     </head>
 
     <body>
+        <div id="custom-cursor"></div>
         <!-- entire page -->
         <div class = "container"> 
             
@@ -281,6 +300,7 @@
             });
         </script>
     <script src="../js/shop.js"></script>
+    <script src="../js/cursor.js"></script>
 
     </body>
     

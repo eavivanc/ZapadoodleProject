@@ -2,11 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Team</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
+        <style> 
+            body {
+  cursor: none; /* hide system cursor */
+}
+
+#custom-cursor {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("../css/assets/star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.1s ease;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+}
+        </style>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
+        <div id="custom-cursor"></div>
         <div class = "container">
 
             <div id="cart-sidebar">
@@ -60,5 +81,7 @@
             </div>
         </div>
     <script src="../js/shop.js"></script>
+    <script src="../js/cursor.js"></script>
+    
     </body>
 </html>

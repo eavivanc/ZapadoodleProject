@@ -2,16 +2,34 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About the Team | Zap-a-Doodle Team</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <link rel="stylesheet" type="text/css" href="../css/zap team.css">
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
-            
+            body {
+  cursor: none; /* hide system cursor */
+}
+
+#custom-cursor {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("../css/assets/star.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.1s ease;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+}
         </style>
     </head>
     <body>
+        <div id="custom-cursor"></div>
         <div class = "container">
           <div id="cart-sidebar">
             <div class="cart-top">
@@ -51,13 +69,11 @@
 
   <div class="group-image-section">
     <img src="../css/assets/lightning_bolt_star_1.svg" alt="accent left" class="accent" />
-    <div class="group-placeholder">Group Image Placeholder</div>
+    <img src="../css/assets/zap_a_doodle_character graphic.svg" alt="Zap-A-Doodle Character" class="character-graphic" />
     <img src="../css/assets/lightning_bolt_star_2.svg" alt="accent right" class="accent" />
   </div>
 
-  <img src="../css/assets/zap_a_doodle_character graphic.svg" alt="Zap-A-Doodle Character" class="character-graphic" />
-
-  <div class="bios">
+  <div class="section bios">
     <div class="bio">
         <div class="bio-img-container">
             <img src="../css/assets/BuzzWord - img- Sebastian.jpeg" alt="Sebastian" class="bio-img" />
@@ -66,8 +82,7 @@
         <h3>Sebastian Antorcha</h3>
         <h4>Creative Director</h4>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus tellus in neque volutpat, sed efficitur erat malesuada. Proin quis orci eu turpis placerat lacinia non a erat.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus tellus in neque volutpat, sed efficitur erat malesuada. Proin quis orci eu turpis placerat lacinia non a erat.
+        <p>Hi, I'm Sebastian, a sophomore at the University of Southern California’s Iovine and Young Academy, receiving a degree in Arts, Technology, and the Business of Innovation with a minor in business finance. I love challenging myself and learning new skills. I'm passionate about tackling issues surrounding sustainability, human-centered design, and human health. I love learning and talking to people, so feel free to reach out.<br><br>I believe creativity is a means to make this world a better place. A key focus of my work is human-centered design and sustainability, ensuring each project aligns with both functional and user-centric goals.  My work also varies in mediums as I like experimenting and expanding my experiences.
         </p>
       </div>
     </div>
@@ -80,7 +95,7 @@
         <h3>Skye Gaertner</h3>
         <h4>Design Engineer</h4>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus tellus in neque volutpat, sed efficitur erat malesuada. Proin quis orci eu turpis placerat lacinia non a erat.</p>
+        <p>Hello there. I'm Skye, a homeschooled actor, and a current Freshman at USC's Iovine and Young Academy.<br><br>I am an entrepreneur at heart, and I love to tackle big problems, make things, and express creativity in new ways..</p>
       </div>
     </div>
 
@@ -98,24 +113,24 @@
             </p>
       </div>
     </div>
-  </div>                
+  </div>    
+  
+  <div id="footer">
+    <div id="footer-brand">
+        <img class="footerimg" src="../css/assets/zap_a_doodle_wordmark.png">
+        <p class="rights">© 2025 Zap-A-Doodle. All Rights Reserved.</p>
+    </div>
+    <div id="footer-links">
+        <a href="productdescription.html" class="footer-link">PRODUCT</a>
+        <a href="zapteam.html" class="footer-link">ABOUT</a>
+        <a href="prod_dev.html" class="footer-link">DEVELOPMENT</a>
+        <a href="support.html" class="footer-link">SUPPORT US</a>
+        <a href="webteam.html" class="footer-link">DEV TEAM</a>
+    </div>
+</div>
             </div>
-            <div id="footer">
-            <div id="footer-brand">
-                <img class="footerimg" src="../css/assets/zap_a_doodle_wordmark.png">
-                <p class="rights">© 2025 Zap-A-Doodle. All Rights Reserved.</p>
-            </div>
-            <div id="footer-links">
-                <a href="productdescription.html" class="footer-link">PRODUCT</a>
-                <a href="zapteam.html" class="footer-link">ABOUT</a>
-                <a href="prod_dev.html" class="footer-link">DEVELOPMENT</a>
-                <a href="support.html" class="footer-link">SUPPORT US</a>
-                <a href="webteam.html" class="footer-link">DEV TEAM</a>
-            </div>
-        </div>
-        </div>
         <script src="../js/shop.js"></script>
-
+        <script src="../js/cursor.js"></script>
     </body>
     
     
