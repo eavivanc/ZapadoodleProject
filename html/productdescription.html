@@ -6,25 +6,11 @@
         <title>Product Description</title>
         <link rel="stylesheet" type="text/css" href="../css/home.css">
         <link rel="stylesheet" type="text/css" href="../css/proddesc2.css">
+        <link rel="stylesheet" href="../css/starTrail.css">
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <style>
-            body {
-  cursor: none; /* hide system cursor */
-}
 
-#custom-cursor {
-  width: 48px;
-  aspect-ratio: 1 / 1;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  background-image: url("../css/assets/star.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.1s ease;
-  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
-}
 @media (max-width:767px) {
                 .product {
                     flex-direction: column;
@@ -45,7 +31,6 @@
         </style>
     </head>
     <body>
-        <div id="custom-cursor"></div>
         <div class = "container"></div>
     <body>
         <div id="container">
@@ -195,7 +180,7 @@
     </body>
     <script src = "../js/shop.js"></script>
     <script src = "../js/productdescription.js"></script>
-    <script src="../js/cursor.js"></script>
     <script src="../js/mobilenav.js"></script>
+    <script src="../js/starTrail.js"></script>
 
 </html>
