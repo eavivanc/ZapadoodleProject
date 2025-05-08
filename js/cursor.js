@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    const defaultCursor = 'url("/css/assets/star.png") 16 16, auto';
-    const hoverCursor = 'url("/css/assets/lightning-bolt.png") 16 16, auto';
+    const defaultCursor = 'url("https://cdn-icons-png.flaticon.com/512/616/616408.png") 16 16, auto';
+    const hoverCursor = 'url("https://cdn-icons-png.flaticon.com/512/616/616408.png") 16 16, auto';
 
     $('body').css('cursor', defaultCursor);
 
