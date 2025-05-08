@@ -17,7 +17,7 @@ body {
     position: absolute;
     width: 20px;
     height: 24px;
-    background: yellow;
+    background: #FFE45C;
     transform: skewX(22.5deg) skewY(22.5deg);
   }
   
