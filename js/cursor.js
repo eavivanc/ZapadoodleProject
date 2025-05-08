@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    const defaultCursor = 'url("/css/assets/star.svg") 16 16, auto';
-const hoverCursor = 'url("/css/assets/lightning-bolt.svg") 16 16, auto';
+    const defaultCursor = 'url("../css/assets/star.svg") 16 16, auto';
+    const hoverCursor = 'url("../css/assets/lightning-bolt.svg") 16 16, auto';
 
 
     // Set the default cursor on the entire page
@@ -10,7 +10,7 @@ const hoverCursor = 'url("/css/assets/lightning-bolt.svg") 16 16, auto';
     $('img').hover(
         function () {
             $(this).css('cursor', hoverCursor);
-        },
+        },  
         function () {
             $(this).css('cursor', defaultCursor);
         }
