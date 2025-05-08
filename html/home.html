@@ -15,7 +15,7 @@
                 margin: 0px auto;
                 position: relative;
                 text-align: center;
-                min-height: 800px;
+                min-height: 820px;
             }
             .landingimg {
                 width: 90%;
@@ -111,8 +111,52 @@
                     min-height: 100vh;
                 }
             }
-
+            .landingimg-wrapper {
+                position: absolute;
+                top: 180px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+                width: 90%;
+                pointer-events: none;
+            }
+            #zaplogo {
+                width: 100%;
+                height: auto;
+                opacity: 0;
+                transform: translateY(50px) scale(0.8) rotate(-10deg);
+                transition: all 1s ease-out;
+            }
+            #zaplogo.wiggle {
+                animation: wiggle 2s infinite ease-in-out;
+            }
+            @keyframes wiggle {
+                0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                transform: scale(1.02) rotate(2deg);
+            }
+            50% {
+                transform: scale(0.98) rotate(-2deg);
+            }
+            75% {
+                transform: scale(1.01) rotate(1deg);
+            }
+            }
         </style>
+        <script>
+            window.addEventListener("load", function () {
+              const logo = document.getElementById("zaplogo");
+              requestAnimationFrame(() => {
+                logo.style.opacity = "1";
+                logo.style.transform = "translateY(0) scale(1) rotate(0deg)";
+              });
+              setTimeout(() => {
+                logo.classList.add("wiggle");
+              }, 1000);
+            });
+          </script>
     </head>
     <body>
         <div id="container">
@@ -128,11 +172,14 @@
                 <img class="iconbutton" src="../css/assets/shoppingcartbuttom.png">
             </div>
             
-        <div id="landing">
-            <p class="tagline">The new party game of the century.</p>
-            <h1 class="title">Shockingly fun!</h1>
-            <img class="landingimg" src="../css/assets/zap_a_doodle_character graphic.svg">
-        </div>
+         <div id="landing">
+                <p class="tagline">The new party game of the century.</p>
+                <h1 class="title">Shockingly fun!</h1>
+                
+            <div class="landingimg-wrapper">
+                <img id="zaplogo" src="../css/assets/zap_a_doodle_character graphic.svg">
+            </div>
+        </div>   
 
         <div class="section" id="instructions">
             <div class="quote-top">
@@ -162,7 +209,7 @@
         <div class="section" id="support">
             <h2>Support us!</h2>
             <p class="supportcopy">Love the chaos? Help us keep the buzz alive! Your donation fuels development, better shocks (we mean features), and helps our small team bring the fun to more players worldwide.</p>
-            <a class="donate-button">DONATE</a>
+            <a href="support.html"class="donate-button">DONATE</a>
         </div>
 
         <div id="footer">
