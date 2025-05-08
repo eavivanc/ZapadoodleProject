@@ -214,6 +214,8 @@ currentAudio = new Audio();
 document.querySelector("#play-pause").addEventListener("click", function() {
 
 
+
+    if(currentAudio.paused == true){
     document.querySelector("#play-pause").src = "/1x/pause.png";
     source = document.querySelector("#step-img").src;
     for(i =0; i < steps.length; i++){
@@ -231,6 +233,15 @@ document.querySelector("#play-pause").addEventListener("click", function() {
             }
         }
     }
+}
+else{
+
+    document.querySelector("#play-pause").src = "/1x/play.png";
+    currentAudio.pause();
+    ticking.pause();
+    console.log("paused");
+}
+    
 
 });
 
