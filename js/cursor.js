@@ -11,9 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
     images.forEach((img) => {
       img.addEventListener("mouseenter", () => {
         cursor.style.backgroundImage = 'url("../css/assets/lightning-bolt.png")';
+        cursor.style.width = "64px";
+        cursor.style.height = "64px";
       });
+  
       img.addEventListener("mouseleave", () => {
         cursor.style.backgroundImage = 'url("../css/assets/star.png")';
+        cursor.style.width = "48px";
+        cursor.style.height = "48px";
       });
     });
   });

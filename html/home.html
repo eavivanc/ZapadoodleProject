@@ -150,15 +150,18 @@
 }
 
 #custom-cursor {
-  width: 32px;
-  height: 48px;
+  width: 48px;
+  aspect-ratio: 1 / 1;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   background-image: url("../css/assets/star.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: transform 0.1s ease;
 }
+
         </style>
         <script>
             window.addEventListener("load", function () {
