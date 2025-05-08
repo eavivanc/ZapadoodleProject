@@ -249,3 +249,24 @@ h3{
     padding:15px;
 }
 
+#reviewtitle{
+    margin: 20px auto;
+    text-decoration: underline;
+}
+
+#reviewbox{
+    margin:auto;
+    width: 800px;
+    height: 100px;
+    font-family: 'instrument-sans-variable',sans-serif;
+    font-size: 14pt;
+}
+
+#postbutton{
+    width:100px;
+    height:30px;
+    border-radius: 8px;
+    cursor:grab;
+    margin : auto;
+
+}

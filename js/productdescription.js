@@ -72,16 +72,48 @@ $("#description-tab").on("click", function() {
     document.querySelector(".description-box").innerHTML = description_info;
 });
 $("#reviews-tab").on("click", function() {
-    document.querySelector(".description-box").innerHTML = "<h1 id = 'reviewtitle'>Customer Reviews</h1>";
-    document.querySelector(".description-box").createElement("div");
+    document.querySelector(".description-box").innerHTML = "<h1 id = 'reviewtitle'>Customer Reviews</h1> <h3>Let us know your thoughts on Zap-A-Doodle!</h3>";
+    const reviewbox = document.createElement("input");
     
+    reviewbox.id = "reviewbox";
+    //reviewbox.style.overflow = "scroll";
+    console.log(reviewbox);
+
+    document.querySelector(".description-box").appendChild(reviewbox);
+    
+    reviewbox.style.backgroundColor = "white";
+
+    const postbutton = document.createElement("button");
+    postbutton.innerHTML = "Post Review";
+    postbutton.id = "postbutton";
+    postbutton.style.backgroundColor = "#FFE45C";
+
+    document.querySelector(".description-box").appendChild(postbutton);
+
+
+document.querySelector("#postbutton").addEventListener("click", function() {
+
+    const review = document.querySelector("#reviewbox").value;
+    console.log(review);
+
+    const reviewtext = document.createElement("div");
+    reviewtext.class = "REVIEW";
+    reviewtext.innerHTML = "<p>" + review + "</p>";
+
+    document.querySelector(".description-box").appendChild(reviewtext);
 
 
 
+
+});
 
     
 }
 );
+
+
+
+
 $("#shipping-tab").on("click", function() {
     document.querySelector(".description-box").innerHTML = `<h1 id = "shippingtitle">Standard Shipping Information</h1>
 <h3>Processing Time:</h3>
@@ -157,9 +189,9 @@ steps[7] = "/1x/step8.png";
 
 let step_description = new Array();
 step_description[0] = "To start the game form two teams of at least two players each.";
-step_description[1] = " bla bla bla2";
-step_description[2] = " bla bla bla3";
-step_description[3] = " bla bla bla4";
+step_description[1] = "Assign one player on your team to draw with the vibrating or zapping pen, one player on the opposing team will control the buzzer.";
+step_description[2] = "The player who is drawing takes a look at the word their team is trying to guess and hands the card to the opposing player controlling the buzzer. ";
+step_description[3] = " The opposing team starts the buzzer!";
 step_description[4] = " bla bla bla5";
 step_description[5] = " bla bla bla6";
 step_description[6] = " bla bla bla7";
@@ -168,17 +200,35 @@ step_description[7] = " bla bla bla8";
 let audio = new Array();
 
 audio[0] = "step1.mp3";
+audio[1] = "step2.mp3";
+audio[2] = "step3.mp3";
+audio[3] = "step4.mp3";
+audio[4] = "step5.mp3";
+audio[5] = "step6.mp3";
+audio[6] = "step7.mp3";
+audio[7] = "step8.mp3";
 
+
+currentAudio = new Audio();
 
 document.querySelector("#play-pause").addEventListener("click", function() {
 
+
+    document.querySelector("#play-pause").src = "/1x/pause.png";
     source = document.querySelector("#step-img").src;
     for(i =0; i < steps.length; i++){
 
         if(source == "http://127.0.0.1:5501" + steps[i]){
 
-            audio = new Audio("/css/assets/" + audio[i]);
-            audio.play();
+            currentAudio.src = "/css/assets/"+ audio[i];
+            currentAudio.play();
+            if(i ==3)
+            {
+                ticking = new Audio();
+                ticking.src = "/css/assets/ticking.mp3";
+                ticking.play();
+                ticking.repeat = false;
+            }
         }
     }
 
@@ -187,6 +237,10 @@ document.querySelector("#play-pause").addEventListener("click", function() {
 
 
 document.querySelector("#back-button").addEventListener("click", function() {
+
+    document.querySelector("#play-pause").src = "/1x/play.png";
+   currentAudio.pause();
+    
    source = document.querySelector("#step-img").src;
    
    for(i =0; i < steps.length; i++){
@@ -210,6 +264,9 @@ document.querySelector("#back-button").addEventListener("click", function() {
 });
 
 document.querySelector("#forward-button").addEventListener("click", function() {
+
+    document.querySelector("#play-pause").src = "/1x/play.png";
+    currentAudio.pause();
     source= document.querySelector("#step-img").src;
 
 
@@ -247,6 +304,8 @@ $(".close").on("mouseover", function() {
 }
 );
 
+
+/*
 $("#cart").on("click", function() {
     
 document.querySelector(".sidecart").style.right = "0px";
@@ -260,6 +319,8 @@ $(".close").on("click", function() {
     document.querySelector(".sidecart").style.transition = "1s";
 }
 );
+
+
 
 document.querySelector(".add-to-cart-button").addEventListener("click", function() {
 
@@ -284,5 +345,5 @@ document.querySelector(".add-to-cart-button").addEventListener("click", function
         document.querySelector(".cart-content").innerHTML += "<div> <h3>Zap-A-Doodle Game</h3> <in </div>";
     itemnum +=1;
     
-});
+});*/
 
