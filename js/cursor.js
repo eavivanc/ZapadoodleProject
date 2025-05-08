@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   
     images.forEach((img) => {
       img.addEventListener("mouseenter", () => {
-        cursor.style.backgroundImage = 'url("css/assets/lightning-bolt.png")';
+        cursor.style.backgroundImage = 'url("..css/assets/lightning-bolt.png")';
       });
       img.addEventListener("mouseleave", () => {
-        cursor.style.backgroundImage = 'url("css/assets/star.png")';
+        cursor.style.backgroundImage = 'url("..css/assets/star.png")';
       });
     });
   });
