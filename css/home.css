@@ -85,6 +85,20 @@ a {
 .mobile-nav {
     display: none;
 }
+.mobile-links {
+    display: none;
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 110px);
+    background-color: #1B1B1B;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
 
 /* cart sidebar */
 #cart-sidebar {
@@ -284,6 +298,7 @@ p {
 }
 #footer-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .footer-link {
@@ -300,11 +315,17 @@ p {
     margin: 0px;
 }
 
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+
 @media (max-width: 767px) {
     .title {
         margin-top: -30px;
         font-weight: 600;
-        font-size: 45pt !important;
+        font-size: 50pt !important;
     }
     h1 {
         font-size: 30pt !important;
@@ -316,42 +337,41 @@ p {
         font-size: 14pt;
     }
         #navbar {
-            padding: 10px 30px;
+            padding: 30px 30px;
             gap: 8px;
         }
-    
-        .navlinks {
-            display: none
-        }
-
         .mobile-nav {
-            display:inline;
+            display: block;
         }
-    
+        .mobile-links.show {
+            display: flex;
+        }
         .navbutton {
+            color: rgba(255, 255, 255, 0.671);
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .navlinks {
             display: none;
         }
-    
         .icon {
-            width: 35px;
+            width: 30px;
             height: auto;
         }
-    
         .iconbutton {
-            width: 28px;
+            width: 25px;
             height: auto;
-        }
-    
+        }  
         .navcart {
             display: flex;
             align-items: center;
             gap: 5px;
-        }
-    
+        } 
         .cart-number {
             font-size: 12px;
             padding: 2px 6px;
         }
+        
     .quote-bottom p {
         font-size: 40pt !important;
     }
@@ -360,6 +380,13 @@ p {
         flex-wrap: wrap;
     }
     #footer-brand, #footer-links {
-        width: 100%
+        width: 100%;
+    }
+    #cart-sidebar {
+        width: 350px; 
+        right: -350px;
+    }
+    .cart-item-desc p {
+        font-size: 8pt !important; 
     }
 }
