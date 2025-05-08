@@ -9,24 +9,27 @@
         <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-thumbnail.css" />
         <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-zoom.css" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <style> 
-        body {
-  cursor: none; /* hide system cursor */
-}
 
-#custom-cursor {
-  width: 48px;
-  aspect-ratio: 1 / 1;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  background-image: url("../css/assets/star.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.1s ease;
-  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
-}
+        <style> 
+
+            body {
+            cursor: none; /* hide system cursor */
+            }
+
+            #custom-cursor {
+            width: 48px;
+            aspect-ratio: 1 / 1;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("../css/assets/star.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.1s ease;
+            filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+            }
+
             .team-float-right {
                 position: absolute;
                 width: 150px;
@@ -38,7 +41,7 @@
             }
 
             .text{
-                padding-left:50px;
+                padding-left:20px;
                 margin-right:20px;
                 width:600px;
             }
@@ -48,7 +51,7 @@
             }
 
             .img2{
-                width:650px;
+                width:600px;
                 height:auto;
                 max-height:500px;
                 object-fit: cover;
@@ -63,6 +66,13 @@
                 transform: translateY(-10px);
             }
 
+            #content{
+                margin: 50px auto 0 auto;
+                width: 100%;
+                max-width: 1250px;
+
+            }
+
 
         </style>
 
@@ -71,7 +81,7 @@
     <body>
         <div id="custom-cursor"></div>
         <!-- entire page -->
-        <div class = "container"> 
+
             
             <!-- navbar -->
             <div id="cart-sidebar">
@@ -109,9 +119,11 @@
              <div class="header">
                 <p class="tagline">The process behind Zap-A-Doodle.</p>
                 <h1>Development</h1>
-                <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right">
+                <!-- <img src="../css/assets/lightning_bolt_star_1.svg" class="team-float-right"> -->
             </div>
             <!-- end of header -->
+
+<div id="content">
 
     <!-- start of section 1 -->
         <!-- start of flex 1 -->
@@ -128,15 +140,11 @@
                 <br>
                 <br>
                 <br>
-                <br>
-                <br>
-                <br>
-                <br>
 
                 <h2>The first shock</h2>
 
                 <p>Back in February, we had our first shocking prototype working,
-                tethered to an Arduino.  Then, in March, we decided to make a version
+                tethered to an Arduino. Then, in March, we decided to make a version
                 that vibrated instead of shocked (in case folks really didn't want to
                 get shocked but we could still play-test with everyone) and then
                 finally in late March we got the wireless shocking pen working and the
@@ -167,8 +175,6 @@
 
             <div class="text">
     
-                    <br>
-                    <br>
                     <br>
                     <br>
                     <br>
@@ -249,6 +255,10 @@
         </a>
     </div>
 
+<!-- end of content container -->
+</div>
+
+
     <div id="footer">
         <div id="footer-brand">
             <img class="footerimg" src="../css/assets/zap_a_doodle_wordmark.png">
@@ -262,11 +272,10 @@
             <a href="webteam.html" class="footer-link">DEV TEAM</a>
         </div>
     </div>
-        <!-- end of container -->
-            </div>
 
 
-        </div>
+
+      
            
 
    
