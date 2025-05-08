@@ -4,8 +4,8 @@ body {
   
   .star {
     position: fixed;
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 24px;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
@@ -15,8 +15,8 @@ body {
   .star::after {
     content: "";
     position: absolute;
-    width: 32px;
-    height: 36px;
+    width: 20px;
+    height: 24px;
     background: yellow;
     transform: skewX(22.5deg) skewY(22.5deg);
   }
