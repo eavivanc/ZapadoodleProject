@@ -25,11 +25,11 @@ function animateStars() {
     star.style.left = `${pos.x}px`;
     star.style.top = `${pos.y}px`;
 
-    const yellow = [255, 228, 92]; // #FFE45C
-    const blue = [13, 104, 169];  // #0D68A9
+    const yellow = [255, 228, 92];
+    const blue = [255, 80, 80];
 
-    // Reverse the gradient: 0 = blue, 1 = yellow
-    const factor = 1 - index / (stars.length - 1);
+    // Normal gradient: 0 = yellow, 1 = blue
+    const factor = index / (stars.length - 1);
 
     const r = Math.round(yellow[0] + (blue[0] - yellow[0]) * factor);
     const g = Math.round(yellow[1] + (blue[1] - yellow[1]) * factor);
