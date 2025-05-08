@@ -27,21 +27,19 @@
             .text{
                 padding-left:20px;
                 margin-right:20px;
-                max-width:600px;
-                width:100%;
+                /* max-width:600px;
+                width:100%; */
                 font-size:0.2vw;
             }
 
             .flex{
                 display:flex;
-                /* flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px; */
             }
 
             .img2{
                 width:600px;
-                max-width:100%;
+                /* width:100%; */
+                /* font-size:0.2vw; */
                 height:auto;
                 max-height:500px;
                 object-fit: cover;
@@ -63,10 +61,24 @@
 
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 1240px) {
             .text {
                 padding: 0 10px;
                 margin: 0 auto;
+            }
+
+            .flex{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                text-align: center; /* add this */
+            }
+
+
+            .img2{
+                max-width:100%;
+                margin: 0 auto 20px auto;
+                display: block;
             }
 
             .team-float-right {
