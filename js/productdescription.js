@@ -183,14 +183,14 @@ $("#forward-button").on("mouseout", function() {
 
 
 let steps = new Array;
-steps[0] = "/1x/step1.png";
-steps[1] = "/1x/step2.png";
-steps[2] = "/1x/step3.png";
-steps[3] = "/1x/step4.png";
-steps[4] = "/1x/step5.png";
-steps[5] = "/1x/step6.png";
-steps[6] = "/1x/step7.png";
-steps[7] = "/1x/step8.png";
+steps[0] = "../1x/step1.png";
+steps[1] = "../1x/step2.png";
+steps[2] = "..1x/step3.png";
+steps[3] = "../1x/step4.png";
+steps[4] = "../1x/step5.png";
+steps[5] = "../1x/step6.png";
+steps[6] = "../1x/step7.png";
+steps[7] = "../1x/step8.png";
 
 
 let step_description = new Array();
@@ -205,14 +205,14 @@ step_description[7] = "Pass the pen to the opposing team to start the next round
 
 let audio = new Array();
 
-audio[0] = "step1.mp3";
-audio[1] = "step2.mp3";
-audio[2] = "step3.mp3";
-audio[3] = "step4.mp3";
-audio[4] = "step5.mp3";
-audio[5] = "step6.mp3";
-audio[6] = "step7.mp3";
-audio[7] = "step8.mp3";
+audio[0] = "../css/assets/step1.mp3";
+audio[1] = "../css/assets/step2.mp3";
+audio[2] = "../css/assets/step3.mp3";
+audio[3] = "../css/assets/step4.mp3";
+audio[4] = "../css/assets/step5.mp3";
+audio[5] = "../css/assets/step6.mp3";
+audio[6] = "../css/assets/step7.mp3";
+audio[7] = "../css/assets/step8.mp3";
 
 
 currentAudio = new Audio();
@@ -233,7 +233,7 @@ document.querySelector("#play-pause").addEventListener("click", function() {
             if(i ==3)
             {
                 ticking = new Audio();
-                ticking.src = "/css/assets/ticking.mp3";
+                ticking.src = "../css/assets/ticking.mp3";
                 ticking.play();
                 ticking.repeat = false;
             }
