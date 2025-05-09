@@ -163,9 +163,9 @@ width:70px;
     line-height: 25px;
 }
 #product-specifications{
-    columns: 2;
-    line-height: 20px;
-    margin-left:40px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 h2{
     margin-left:40px;
@@ -186,6 +186,13 @@ h2{
     margin-top :20px;
     margin-bottom:30px;
     font-size: 14pt;
+}
+#specifications-fullbox{
+    width: 100%;
+    padding: 20px;
+}
+.specifications-half {
+    width: 100%;
 }
 #shipping-fullbox{
     width: 100%;

@@ -379,6 +379,9 @@ p {
         flex-direction: column;
         flex-wrap: wrap;
     }
+    .footerimg {
+        width: 100%;
+    }
     #footer-brand, #footer-links {
         width: 100%;
     }
