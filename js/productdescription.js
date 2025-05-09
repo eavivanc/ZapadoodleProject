@@ -228,7 +228,7 @@ document.querySelector("#play-pause").addEventListener("click", function() {
 
         if(source.endsWith(steps[i])) {
 
-            currentAudio.src = "../css/assets/"+ audio[i];
+            currentAudio.src = audio[i];
             currentAudio.play();
             if(i ==3)
             {
