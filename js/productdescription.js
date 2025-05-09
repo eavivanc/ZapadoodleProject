@@ -233,7 +233,7 @@ document.querySelector("#play-pause").addEventListener("click", function() {
             if(i ==3)
             {
                 ticking = new Audio();
-                ticking.src = "../css/assets/ticking.mp3";
+                ticking.src = "/css/assets/ticking.mp3";
                 ticking.play();
                 ticking.repeat = false;
             }
