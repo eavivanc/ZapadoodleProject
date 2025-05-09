@@ -226,7 +226,7 @@ document.querySelector("#play-pause").addEventListener("click", function() {
     source = document.querySelector("#step-img").src;
     for(i =0; i < steps.length; i++){
 
-        if(source == "http://127.0.0.1:5501" + steps[i]){
+        if(source.endsWith(steps[i])) {
 
             currentAudio.src = "../css/assets/"+ audio[i];
             currentAudio.play();
@@ -262,7 +262,7 @@ document.querySelector("#back-button").addEventListener("click", function() {
    
    for(i =0; i < steps.length; i++){
 
-    if(source == "http://127.0.0.1:5501" + steps[i]){
+    if(source.endsWith(steps[i])) {
         if(i == 0){
             source = steps[7];
             document.querySelector("#step-text").innerHTML = step_description[7];
@@ -293,7 +293,7 @@ document.querySelector("#forward-button").addEventListener("click", function() {
         console.log(i);
         console.log(steps[i]);
         console.log(source);
-        if(source == "http://127.0.0.1:5501"+steps[i]){
+        if(source.endsWith(steps[i])) {
             if(i == steps.length - 1){
                 source = steps[0];
                 document.querySelector("#step-text").innerHTML = step_description[0];
