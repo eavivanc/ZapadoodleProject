@@ -145,7 +145,7 @@ International Shipping	7–21 business days	Calculated at checkout</p>
 <p class = 'shippinginfo'>International customers are responsible for any customs or import taxes. </p>
 
 <h3>Questions?</h3>
-<p class = 'shippinginfo'> If you have any issues with your order or shipping status, please contact us.</p>
+<p class = 'shippinginfo'> If you have any issues with your order or shipping status, please contact us at [your support email].</p>
 </div>
 `;
 
