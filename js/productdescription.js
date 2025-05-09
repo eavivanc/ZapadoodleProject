@@ -222,18 +222,18 @@ document.querySelector("#play-pause").addEventListener("click", function() {
 
 
     if(currentAudio.paused == true){
-    document.querySelector("#play-pause").src = "/1x/pause.png";
+    document.querySelector("#play-pause").src = "../1x/pause.png";
     source = document.querySelector("#step-img").src;
     for(i =0; i < steps.length; i++){
 
-        if(source == "http://127.0.0.1:5501" + steps[i]){
+        if(source.endsWith(steps[i])) {
 
-            currentAudio.src = "/css/assets/"+ audio[i];
+            currentAudio.src = "../css/assets/"+ audio[i];
             currentAudio.play();
             if(i ==3)
             {
                 ticking = new Audio();
-                ticking.src = "/css/assets/ticking.mp3";
+                ticking.src = "../css/assets/ticking.mp3";
                 ticking.play();
                 ticking.repeat = false;
             }
@@ -242,7 +242,7 @@ document.querySelector("#play-pause").addEventListener("click", function() {
 }
 else{
 
-    document.querySelector("#play-pause").src = "/1x/play.png";
+    document.querySelector("#play-pause").src = "../1x/play.png";
     currentAudio.pause();
     ticking.pause();
     console.log("paused");
@@ -255,14 +255,14 @@ else{
 
 document.querySelector("#back-button").addEventListener("click", function() {
 
-    document.querySelector("#play-pause").src = "/1x/play.png";
+    document.querySelector("#play-pause").src = "../1x/play.png";
    currentAudio.pause();
     
    source = document.querySelector("#step-img").src;
    
    for(i =0; i < steps.length; i++){
 
-    if(source == "http://127.0.0.1:5501" + steps[i]){
+    if(source.endsWith(steps[i])) {
         if(i == 0){
             source = steps[7];
             document.querySelector("#step-text").innerHTML = step_description[7];
@@ -282,7 +282,7 @@ document.querySelector("#back-button").addEventListener("click", function() {
 
 document.querySelector("#forward-button").addEventListener("click", function() {
 
-    document.querySelector("#play-pause").src = "/1x/play.png";
+    document.querySelector("#play-pause").src = "../1x/play.png";
     currentAudio.pause();
     source= document.querySelector("#step-img").src;
 
@@ -293,7 +293,7 @@ document.querySelector("#forward-button").addEventListener("click", function() {
         console.log(i);
         console.log(steps[i]);
         console.log(source);
-        if(source == "http://127.0.0.1:5501"+steps[i]){
+        if(source.endsWith(steps[i])) {
             if(i == steps.length - 1){
                 source = steps[0];
                 document.querySelector("#step-text").innerHTML = step_description[0];
