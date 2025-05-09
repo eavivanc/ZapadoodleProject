@@ -145,7 +145,7 @@ International Shipping	7–21 business days	Calculated at checkout</p>
 <p class = 'shippinginfo'>International customers are responsible for any customs or import taxes. </p>
 
 <h3>Questions?</h3>
-<p class = 'shippinginfo'> If you have any issues with your order or shipping status, please contact us.</p>
+<p class = 'shippinginfo'> If you have any issues with your order or shipping status, please contact us at [your support email].</p>
 </div>
 `;
 
@@ -183,14 +183,14 @@ $("#forward-button").on("mouseout", function() {
 
 
 let steps = new Array;
-steps[0] = "../1x/step1.png";
-steps[1] = "../1x/step2.png";
-steps[2] = "..1x/step3.png";
-steps[3] = "../1x/step4.png";
-steps[4] = "../1x/step5.png";
-steps[5] = "../1x/step6.png";
-steps[6] = "../1x/step7.png";
-steps[7] = "../1x/step8.png";
+steps[0] = "/1x/step1.png";
+steps[1] = "/1x/step2.png";
+steps[2] = "/1x/step3.png";
+steps[3] = "/1x/step4.png";
+steps[4] = "/1x/step5.png";
+steps[5] = "/1x/step6.png";
+steps[6] = "/1x/step7.png";
+steps[7] = "/1x/step8.png";
 
 
 let step_description = new Array();
