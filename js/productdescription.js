@@ -118,7 +118,7 @@ $("#shipping-tab").on("click", function() {
     
 
 
-    document.querySelector(".description-box").innerHTML = `<h1 id = "shippingtitle">Standard Shipping Information</h1>
+    document.querySelector(".description-box").innerHTML = `<div id="shipping-fullbox"><h1 id = "shippingtitle">Standard Shipping Information</h1>
 <h3>Processing Time:</h3>
 <p class = 'shippinginfo'>Orders are processed within 1–2 business days (excluding weekends and holidays) after receiving your order confirmation email. You will receive another notification when your order has shipped.</p>
 
@@ -146,7 +146,7 @@ International Shipping	7–21 business days	Calculated at checkout</p>
 
 <h3>Questions?</h3>
 <p class = 'shippinginfo'> If you have any issues with your order or shipping status, please contact us at [your support email].</p>
-
+</div>
 `;
 
 
