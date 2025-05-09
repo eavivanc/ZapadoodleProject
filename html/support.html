@@ -266,7 +266,7 @@
           $('#subscribe-form').on('submit', function(e) {
             e.preventDefault();
             $('#subscribe-confirm').fadeIn();
-            $('#email').val('');
+            $('#email-support').val('');
           });
         </script>
 
@@ -282,9 +282,9 @@
         <h2>Stay in the Loop!</h2>
         <p style="color:white; margin-bottom: 20px;">Subscribe for news, updates, and exclusive Zap-a-Doodle content.</p>
         <form id="subscribe-form" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; max-width: 500px; margin: 0 auto;">
-          <input type="email" id="email" name="email" placeholder="Your email address" required
+          <input type="email" id="email-support" name="email" placeholder="Your email address" required
             style="padding: 12px; border-radius: 8px; border: none; font-size: 14pt; width: 100%; max-width: 300px;">
-          <button type="submit"
+          <button id="email-subscribe" type="submit"
             style="background-color: #FFE45C; color: black; padding: 12px 24px; font-size: 14pt; font-weight: bold; border-radius: 10px; border: none; cursor: pointer;">
             Subscribe
           </button>
@@ -332,7 +332,7 @@
     $('#subscribe-form').on('submit', function(e) {
       e.preventDefault();
 
-      const email = $('#email').val();
+      const email = $('#email-support').val();
       if (!email) return;
 
     $('#subscribe-confirm')

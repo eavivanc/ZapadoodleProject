@@ -171,3 +171,33 @@ updateCartNumber();
     $('#checkout-btn').on('click', function () {
         localStorage.removeItem('cart');
     });
+
+
+    /* save email from support page */
+    $("#email-subscribe").on("click", function(){
+        userEmail = $("#email-support").val();
+        document.cookie="email=" + userEmail;
+    })
+    /* autofill email in checkout page */
+    function getCookie(email) {
+        var cemail = email + "=";
+        var cLen = document.cookie.length;
+        var i = 0;
+        
+        while (i < cLen) {
+            var j = i + cemail.length;
+            if (document.cookie.substring(i, j) === cemail) {
+                var cEnd = document.cookie.indexOf(";", j);
+                if (cEnd === -1) cEnd = document.cookie.length;
+                return unescape(document.cookie.substring(j, cEnd));
+            }
+            i++;
+        }
+    
+        return "";
+    }    
+
+    function autofillEmail() {
+        userEmail = getCookie("email");
+        $("#email").val(userEmail);
+    }
