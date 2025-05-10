@@ -247,3 +247,15 @@ h3{
 #description-text{
     width:100%;
 }
+
+#instructions-video{
+    padding:20px;
+    background-color: white;
+
+}
+#title-video{
+
+    font-size: 25pt;
+    text-align: center;
+    font-weight: bold;
+}
